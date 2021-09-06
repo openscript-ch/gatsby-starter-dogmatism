@@ -6447,10 +6447,10 @@ gatsby-plugin-sharp@^3.13.0:
     svgo "1.3.2"
     uuid "3.4.0"
 
-gatsby-plugin-ts-config@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-ts-config/-/gatsby-plugin-ts-config-2.0.2.tgz#9ae815c611084fb5ca3be8a0b5cd45d2284058be"
-  integrity sha512-D1UTCGPtV3rWMzdA39hYfLQm0vaaQe5U/UCxuhR+kB1TFqDURLboWD/K/vcyJYFp+tq025T+hMfvGGLMfWZ+9Q==
+gatsby-plugin-ts-config@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-ts-config/-/gatsby-plugin-ts-config-2.1.0.tgz#86e5967d29f2bcbcfdf72bc4cae527d46dc5e6e2"
+  integrity sha512-G2VyP/Z+RjY/2PpXNlDlU/p88AeffHFZ0s3sSB2xT2gDa7WGmAW5Z5Smi/YWCfmu19sJA7MskmJ+BzurM8knrQ==
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.10.1"
     "@babel/plugin-proposal-optional-chaining" "^7.10.3"
