@@ -1,0 +1,10 @@
+{
+  "name": "gatsby-i18n-l10n-plugin",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "openscript",
+  "devDependencies": {
+    "gatsby-plugin-ts-config": "^2.1.2"
+  }
+}
