@@ -8,6 +8,10 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    // Transformers
+    `gatsby-transformer-sharp`,
+
+    // Plugins
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
@@ -28,7 +32,6 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
         cssPropOptimization: true,
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -41,10 +44,19 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
         display: `minimal-ui`,
         icon: `content/statics/icon.png`, // This path is relative to the root of the site.
       },
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+
+    // Themes
+    {
+      resolve: `gatsby-theme-i18n`,
+      options: {
+        defaultLang: `en`,
+        configPath: require.resolve(`./i18n.json`)
+      }
+    }
   ],
 });
 
