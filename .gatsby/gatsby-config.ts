@@ -41,8 +41,7 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
         display: `minimal-ui`,
         icon: `content/statics/icon.png`, // This path is relative to the root of the site.
       },
-    },
-    `gatsby-i18n-l10n-plugin`
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
