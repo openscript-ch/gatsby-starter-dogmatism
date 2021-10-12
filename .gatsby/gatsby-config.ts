@@ -1,11 +1,15 @@
 import { TSConfigFn } from "gatsby-plugin-ts-config";
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Gatsby Starter Dogmatism`,
+    description: `This is a quite opinionated Gatsby starter.`,
     author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: process.env.SITE_URL || `https://example.com`,
   },
   plugins: [
     // Transformers
