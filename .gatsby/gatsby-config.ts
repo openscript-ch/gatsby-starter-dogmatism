@@ -53,14 +53,14 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
 
-    // Themes
+    // Local plugins
     {
-      resolve: `gatsby-theme-i18n`,
+      resolve: `gatsby-plugin-i18n-l10n`,
       options: {
-        defaultLang: `en`,
-        configPath: require.resolve(`./i18n.json`)
+        defaultLocale: `en-US`
       }
     }
+
   ],
 });
 
