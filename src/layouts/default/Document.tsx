@@ -1,5 +1,5 @@
-import React from "react";
-import { Helmet } from "react-helmet";
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
 export function Document() {
   return (
@@ -7,5 +7,5 @@ export function Document() {
       <html />
       <title>Gatsby Starter Dogmatism</title>
     </Helmet>
-  )
+  );
 }

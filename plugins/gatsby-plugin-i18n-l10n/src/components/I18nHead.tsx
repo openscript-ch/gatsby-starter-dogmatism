@@ -1,11 +1,13 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 type I18nHeadProps = {
   currentLocale: string;
-}
+};
 
-export default function I18nHead({currentLocale}: I18nHeadProps) {
-  return <Helmet>
-    <html lang={currentLocale} />
-  </Helmet>
+export default function I18nHead({ currentLocale }: I18nHeadProps) {
+  return (
+    <Helmet>
+      <html lang={currentLocale} />
+    </Helmet>
+  );
 }

@@ -1,9 +1,9 @@
-import { TSConfigFn } from "gatsby-plugin-ts-config";
-import deCHMessages from "../content/i18n/de-CH.json";
-import enUSMessages from "../content/i18n/en-US.json";
+import { TSConfigFn } from 'gatsby-plugin-ts-config';
+import deCHMessages from '../content/i18n/de-CH.json';
+import enUSMessages from '../content/i18n/en-US.json';
 
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
+  path: `.env.${process.env.NODE_ENV}`,
 });
 
 const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
@@ -26,12 +26,12 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
             options: {
               maxWidth: 1140,
               quality: 90,
-              linkImagesToOriginal: false
-            }
+              linkImagesToOriginal: false,
+            },
           },
-          'gatsby-remark-autolink-headers'
-        ]
-      }
+          'gatsby-remark-autolink-headers',
+        ],
+      },
     },
 
     // Plugins
@@ -50,7 +50,7 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
         // Accepts the following options, all of which are defined by `@emotion/babel-plugin` plugin.
         // The values for each key in this example are the defaults the plugin uses.
         sourceMap: true,
-        autoLabel: "dev-only",
+        autoLabel: 'dev-only',
         labelFormat: `[local]`,
         cssPropOptimization: true,
       },
@@ -77,20 +77,22 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
       resolve: `gatsby-plugin-i18n-l10n`,
       options: {
         defaultLocale: `en-US`,
-        locales: [{
-          locale: `en-US`,
-          prefix: `en`,
-          slugs: {},
-          messages: enUSMessages
-        }, {
-          locale: `de-CH`,
-          prefix: `de`,
-          slugs: {},
-          messages: deCHMessages
-        }]
-      }
-    }
-
+        locales: [
+          {
+            locale: `en-US`,
+            prefix: `en`,
+            slugs: {},
+            messages: enUSMessages,
+          },
+          {
+            locale: `de-CH`,
+            prefix: `de`,
+            slugs: {},
+            messages: deCHMessages,
+          },
+        ],
+      },
+    },
   ],
 });
 
