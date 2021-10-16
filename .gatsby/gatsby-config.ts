@@ -10,12 +10,29 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
   siteMetadata: {
     title: `Gatsby Starter Dogmatism`,
     description: `This is a quite opinionated Gatsby starter.`,
-    author: `@gatsbyjs`,
+    author: `openscript`,
     siteUrl: process.env.SITE_URL || `https://example.com`,
   },
   plugins: [
     // Transformers
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-copy-linked-files',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1140,
+              quality: 90,
+              linkImagesToOriginal: false
+            }
+          },
+          'gatsby-remark-autolink-headers'
+        ]
+      }
+    },
 
     // Plugins
     `gatsby-plugin-react-helmet`,
@@ -23,8 +40,8 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
-        path: `${projectRoot}/content`,
+        name: `pages`,
+        path: `${projectRoot}/src/pages`,
       },
     },
     {
