@@ -1,4 +1,5 @@
 import { GatsbyNode } from "gatsby";
+import { translateNode } from "./src/onCreateNode/translateNode";
 import { translatePage } from "./src/onCreatePage/translatePage";
 import { PluginOptions } from "./types";
 
@@ -13,6 +14,10 @@ const node: GatsbyNode = {
         messages: Joi.object().required().description('Contains the translated messages.')
       })),
     })
+  },
+
+  onCreateNode: async (args, options: PluginOptions) => {
+    await translateNode(args, options);
   },
 
   onCreatePage: async (args, options: PluginOptions) => {
