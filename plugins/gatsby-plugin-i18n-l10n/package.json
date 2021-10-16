@@ -6,7 +6,9 @@
   "author": "openscript",
   "license": "MIT",
   "peerDependencies": {
+    "@types/react-helmet": "^6.1.x",
     "gatsby": "^3.14.x",
-    "react-intl": "^5.20.x"
+    "react-intl": "^5.20.x",
+    "react-helmet": "^6.1.x"
   }
 }
