@@ -1,16 +1,19 @@
-import { CreatePageArgs } from "gatsby";
+import { GatsbyNode } from "gatsby";
+import { PluginOptions } from "../../gatsby-node";
 import { translatePagePaths } from "../utils/path";
 
-export async function translatePage<TContext = Record<string, unknown>>(args: CreatePageArgs<TContext>) {
-  const { page, actions } = args;
+type onCreatePageParameters = Parameters<GatsbyNode['onCreatePage']>;
+type onCreatePage = (args: onCreatePageParameters[0], options?: PluginOptions) => ReturnType<GatsbyNode['onCreatePage']>;
+
+export const translatePage: onCreatePage = async ({page, actions}, options) => {
   const { createPage, deletePage } = actions;
-  const paths = translatePagePaths(page.path);
+  const paths = translatePagePaths(page.path, options);
 
   deletePage(page);
 
   paths.forEach((path) => {
-    const alternativeLanguagePaths = paths.filter((p) => p.language !== path.language);
-    const context = { ...page.context, language: path.language, alternativeLanguagePaths };
+    const alternativeLanguagePaths = paths.filter((p) => p.locale !== path.locale);
+    const context = { ...page.context, locale: path.locale, alternativeLanguagePaths };
     createPage({ ...page, path: path.path, context });
   });
 }

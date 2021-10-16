@@ -7,7 +7,7 @@ This is a quite opinionated Gatsby starter based on [Gatsby's default starter](h
    - There are plugins (e. g. [gatsby-plugin-graphql-codegen](https://www.gatsbyjs.com/plugins/gatsby-plugin-graphql-codegen/)) for Gatsby which integrate this directly into the lifecycle of Gatsby. These plugins are sometimes not updated for a while or everytime you want to regenerate the types you have to restart Gatsby.
  - **Styling with Emotion** using [gatsby-plugin-emotion](https://www.gatsbyjs.com/plugins/gatsby-plugin-emotion/)
  - **Preconfigured VSCode Development Container** using [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
- - **Internationalization with react-intl** using [react-intl](https://formatjs.io/docs/react-intl/) and a local plugin.
+ - **Internationalization with react-intl** using [react-intl](https://formatjs.io/docs/react-intl/) and a [local plugin](./plugins/gatsby-plugin-i18n-l10n).
  - **Preconfigured Github Actions**
 
 ## Getting started

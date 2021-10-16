@@ -1,21 +1,18 @@
-import { defaultLanguage, Language, languages, slugTranslation } from '../i18n';
+import { PluginOptions } from '../../gatsby-node';
 
 export const trimRightSlash = (path: string) => {
   return path === '/' ? path : path.replace(/\/$/, '');
 };
 
-export const addLanguagePrefix = (path: string, language: string) => {
-  return language !== defaultLanguage ? `/${language}${path}` : path;
+export const addLocalePrefix = (path: string, locale: string, defaultLocale: string) => {
+  return locale !== defaultLocale ? `/${locale}${path}` : path;
 };
 
-export const translatePagePaths = (path: string) => {
-  const paths: { language: Language; path: string }[] = [];
-
-  languages.forEach((language) => {
+export const translatePagePaths = (path: string, options: PluginOptions) => {
+  return options.locales.map((locale) => {
     const trimmedPath = trimRightSlash(path);
-    const newPath = slugTranslation[language][trimmedPath] ?? trimmedPath;
-    paths.push({ language, path: addLanguagePrefix(newPath, language) });
-  });
+    const newPath = locale.slugs[trimmedPath] ?? trimmedPath;
 
-  return paths;
+    return {locale: locale.locale, path: addLocalePrefix(newPath, locale.locale, options.defaultLocale)}
+  })
 };

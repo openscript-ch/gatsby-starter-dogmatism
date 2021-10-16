@@ -1,4 +1,6 @@
 import { TSConfigFn } from "gatsby-plugin-ts-config";
+import deCHMessages from "../content/i18n/de-CH.json";
+import enUSMessages from "../content/i18n/en-US.json";
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
@@ -57,7 +59,18 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
     {
       resolve: `gatsby-plugin-i18n-l10n`,
       options: {
-        defaultLocale: `en-US`
+        defaultLocale: `en-US`,
+        locales: [{
+          locale: `en-US`,
+          prefix: `en`,
+          slugs: {},
+          messages: enUSMessages
+        }, {
+          locale: `de-CH`,
+          prefix: `de`,
+          slugs: {},
+          messages: deCHMessages
+        }]
       }
     }
 
