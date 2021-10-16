@@ -1,6 +1,6 @@
 import { IntlProvider } from 'react-intl';
 import { WrapPageElement } from '../types';
-import I18nHead from './I18nHead';
+import I18nHead from './components/I18nHead';
 
 export const wrapPageElement: WrapPageElement = ({ element, props }, options) => {
   const context = props.pageContext;
