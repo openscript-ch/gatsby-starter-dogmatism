@@ -43,6 +43,7 @@
   "scripts": {
     "build": "gatsby build",
     "build:types": "graphql-codegen --config codegen.yml",
+    "build:with-prefix": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
