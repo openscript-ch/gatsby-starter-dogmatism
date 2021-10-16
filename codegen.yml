@@ -8,6 +8,3 @@ generates:
     plugins:
       - typescript
       - typescript-operations
-    config:
-      maybeValue: T
-      avoidOptionals: true

@@ -1,18 +1,12 @@
 {
-  "include": [
-    "./src/**/*",
-    "./.gatsby/**/*",
-    "./graphql-types.ts",
-    "gatsby-browser.ts",
-    "gatsby-ssr.ts"
-  ],
+  "include": ["./src/**/*", "./.gatsby/**/*", "./graphql-types.ts", "gatsby-browser.ts", "gatsby-ssr.ts"],
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
     "lib": ["dom", "ES2017", "ES2019"],
     // "allowJs": true,
     // "checkJs": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "strict": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
