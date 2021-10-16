@@ -2,7 +2,6 @@
   "name": "gatsby-plugin-i18n-l10n",
   "version": "1.0.0",
   "description": "Providing i18n and l10n to Gatsby.",
-  "main": "index.js",
   "author": "openscript",
   "license": "MIT",
   "peerDependencies": {
