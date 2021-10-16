@@ -1,15 +1,6 @@
-import { GatsbyNode, PluginOptions as GatsbyPluginOptions } from "gatsby";
+import { GatsbyNode } from "gatsby";
 import { translatePage } from "./src/onCreatePage/translatePage";
-
-export type PluginOptions = {
-  defaultLocale: string;
-  locales: {
-    locale: string;
-    urlSegment: string;
-    slugs: Record<string, string>;
-    messages: Record<string, string>;
-  }[]
-} & GatsbyPluginOptions;
+import { PluginOptions } from "./types";
 
 const node: GatsbyNode = {
   pluginOptionsSchema: ({Joi}) => {

@@ -1,9 +1,5 @@
-import { GatsbyNode } from "gatsby";
-import { PluginOptions } from "../../gatsby-node";
+import { onCreatePage } from "../../types";
 import { translatePagePaths } from "../utils/path";
-
-type onCreatePageParameters = Parameters<GatsbyNode['onCreatePage']>;
-type onCreatePage = (args: onCreatePageParameters[0], options?: PluginOptions) => ReturnType<GatsbyNode['onCreatePage']>;
 
 export const translatePage: onCreatePage = async ({page, actions}, options) => {
   const { createPage, deletePage } = actions;

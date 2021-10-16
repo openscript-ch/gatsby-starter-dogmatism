@@ -1,6 +1,6 @@
 import { GatsbyBrowser, GatsbySSR } from 'gatsby';
 import { IntlProvider } from 'react-intl';
-import { PluginOptions } from '../gatsby-node';
+import { PluginOptions } from '../types';
 
 type Params1 = Parameters<GatsbyBrowser['wrapPageElement']>
 type Params2 = Parameters<GatsbySSR['wrapPageElement']>
