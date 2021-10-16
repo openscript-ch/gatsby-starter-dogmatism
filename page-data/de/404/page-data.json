@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-404-tsx",
+    "path": "/de/404",
+    "result": {"pageContext":{"locale":"de-CH","alternativeLanguagePaths":[{"locale":"en-US","path":"/404"}]}},
+    "staticQueryHashes": []}
