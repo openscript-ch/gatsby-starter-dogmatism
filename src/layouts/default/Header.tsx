@@ -1,12 +1,15 @@
 import { css, Theme } from '@emotion/react';
 
 const headerStyle = (theme: Theme) => css`
-  height: 2rem;
+  display: flex;
+  align-items: center;
+  height: 6rem;
+  font-size: 2rem;
   background-color: ${theme.secondaryColor};
 `;
 
 type HeaderProps = {
-  title?: string;
+  title: string;
 };
 
 export function Header({ title }: HeaderProps) {

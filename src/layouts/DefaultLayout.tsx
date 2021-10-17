@@ -5,6 +5,7 @@ import { DefaultLayoutQuery } from '../../graphql-types';
 import { defaultTheme } from '../themes/defaultTheme';
 import { Footer } from './default/Footer';
 import { Header } from './default/Header';
+import { Main } from './default/Main';
 
 const query = graphql`
   query DefaultLayout {
@@ -19,7 +20,7 @@ const query = graphql`
   }
 `;
 
-const globalStyles = css`
+const globalStyles = (theme: Theme) => css`
   html {
     height: 100%;
   }
@@ -29,11 +30,22 @@ const globalStyles = css`
   #gatsby-focus-wrapper,
   main {
     margin: 0;
+    font-size: 14px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     min-height: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  header,
+  main,
+  footer {
+    padding: 0 10%;
+
+    @media (max-width: ${theme.breakpoints.tiny}) {
+      padding: 0 1rem;
+    }
   }
 `;
 
@@ -48,8 +60,8 @@ export function DefaultLayout({ children, theme }: DefaultLayoutProps) {
     <ThemeProvider theme={theme || defaultTheme}>
       <Global styles={globalStyles} />
       <Header title={data.site?.siteMetadata?.title || ''} />
-      <main>{children}</main>
-      <Footer></Footer>
+      <Main>{children}</Main>
+      <Footer author={data.site?.siteMetadata?.author || ''} />
     </ThemeProvider>
   );
 }
