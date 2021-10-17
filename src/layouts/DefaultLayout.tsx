@@ -15,6 +15,7 @@ const query = graphql`
         description
         siteUrl
         title
+        version
       }
     }
   }
@@ -61,7 +62,7 @@ export function DefaultLayout({ children, theme }: DefaultLayoutProps) {
       <Global styles={globalStyles} />
       <Header title={data.site?.siteMetadata?.title || ''} />
       <Main>{children}</Main>
-      <Footer author={data.site?.siteMetadata?.author || ''} />
+      <Footer author={data.site?.siteMetadata?.author || ''} version={data.site?.siteMetadata?.version || ''} />
     </ThemeProvider>
   );
 }

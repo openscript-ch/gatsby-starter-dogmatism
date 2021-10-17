@@ -1,6 +1,7 @@
 import { TSConfigFn } from 'gatsby-plugin-ts-config';
 import deCHMessages from '../content/i18n/de-CH.json';
 import enUSMessages from '../content/i18n/en-US.json';
+import packageJson from '../package.json';
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -12,6 +13,7 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
     description: `This is a quite opinionated Gatsby starter.`,
     author: `openscript`,
     siteUrl: process.env.SITE_URL || `https://example.com`,
+    version: packageJson.version,
   },
   plugins: [
     // Transformers

@@ -2473,7 +2473,8 @@ export enum SiteFieldsEnum {
   SiteMetadataAuthor = 'siteMetadata___author',
   SiteMetadataDescription = 'siteMetadata___description',
   SiteMetadataSiteUrl = 'siteMetadata___siteUrl',
-  SiteMetadataTitle = 'siteMetadata___title'
+  SiteMetadataTitle = 'siteMetadata___title',
+  SiteMetadataVersion = 'siteMetadata___version'
 }
 
 export type SiteFilterInput = {
@@ -3696,6 +3697,7 @@ export type SiteSiteMetadata = {
   description?: Maybe<Scalars['String']>;
   siteUrl?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
+  version?: Maybe<Scalars['String']>;
 };
 
 export type SiteSiteMetadataFilterInput = {
@@ -3703,6 +3705,7 @@ export type SiteSiteMetadataFilterInput = {
   description?: Maybe<StringQueryOperatorInput>;
   siteUrl?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
+  version?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SiteSortInput = {
@@ -3766,4 +3769,4 @@ export type GatsbyImageSharpFluid_WithWebp_NoBase64Fragment = { __typename?: 'Im
 export type DefaultLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type DefaultLayoutQuery = { __typename?: 'Query', site?: { __typename?: 'Site', siteMetadata?: { __typename?: 'SiteSiteMetadata', author?: string | null | undefined, description?: string | null | undefined, siteUrl?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined };
+export type DefaultLayoutQuery = { __typename?: 'Query', site?: { __typename?: 'Site', siteMetadata?: { __typename?: 'SiteSiteMetadata', author?: string | null | undefined, description?: string | null | undefined, siteUrl?: string | null | undefined, title?: string | null | undefined, version?: string | null | undefined } | null | undefined } | null | undefined };

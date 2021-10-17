@@ -9,8 +9,13 @@ const footerStyle = (theme: Theme) => css`
 
 type FooterProps = {
   author: string;
+  version: string;
 };
 
-export function Footer({ author }: FooterProps) {
-  return <footer css={footerStyle}>{author}</footer>;
+export function Footer({ author, version }: FooterProps) {
+  return (
+    <footer css={footerStyle}>
+      {author} {version}
+    </footer>
+  );
 }
