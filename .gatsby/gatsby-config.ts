@@ -9,6 +9,7 @@ require('dotenv').config({
 });
 
 const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
+  pathPrefix: process.env.PATH_PREFIX || '/',
   siteMetadata: {
     title: `Gatsby Starter Dogmatism`,
     description: `This is a quite opinionated Gatsby starter.`,

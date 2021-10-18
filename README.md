@@ -10,6 +10,8 @@ This is a quite opinionated Gatsby starter based on [Gatsby's default starter](h
 - **Internationalization with react-intl** using [react-intl](https://formatjs.io/docs/react-intl/), a [local plugin](./plugins/gatsby-plugin-i18n-l10n) and [i18n-ally](https://github.com/lokalise/i18n-ally).
 - **Preconfigured Github Actions** for automatic deployment to [Github Pages](https://pages.github.com/).
 
+> When I used Gatsby for the first time, it wasn't difficult to getting started. What puzzled me is how to structure and organize the project with all it's components and other bits neatly. The main reason I've created this starter, to provide an example how to structure a Gatsby website.
+
 ## Getting started
 
 1. **Fork and clone** the repository `git clone https://github.com/openscript/gatsby-starter-dogmatism` or **use** Gatsbys CLI `gatsby new my-new-project https://github.com/openscript/gatsby-starter-dogmatism` to get a copy.
