@@ -1,7 +1,7 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+import { GatsbyNode } from 'gatsby';
 
-// You can delete this file if you're not using it
+const node: GatsbyNode = {
+  onCreateNode: async args => {},
+};
+
+export default node;

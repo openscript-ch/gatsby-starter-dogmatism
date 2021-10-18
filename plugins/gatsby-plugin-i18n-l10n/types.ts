@@ -1,8 +1,5 @@
 import { GatsbyBrowser, GatsbyNode, GatsbySSR, PluginOptions as GatsbyPluginOptions } from 'gatsby';
 
-export type onCreatePage = (args: Parameters<GatsbyNode['onCreatePage']>[0], options?: PluginOptions) => ReturnType<GatsbyNode['onCreatePage']>;
-export type onCreateNode = (args: Parameters<GatsbyNode['onCreateNode']>[0], options?: PluginOptions) => ReturnType<GatsbyNode['onCreateNode']>;
-
 export type PluginOptions = {
   defaultLocale: string;
   locales: {
@@ -12,6 +9,9 @@ export type PluginOptions = {
     messages: Record<string, string>;
   }[];
 } & GatsbyPluginOptions;
+
+export type onCreatePage = (args: Parameters<GatsbyNode['onCreatePage']>[0], options?: PluginOptions) => ReturnType<GatsbyNode['onCreatePage']>;
+export type onCreateNode = (args: Parameters<GatsbyNode['onCreateNode']>[0], options?: PluginOptions) => ReturnType<GatsbyNode['onCreateNode']>;
 
 type GatsbyBrowserWrapPageElementParams = Parameters<GatsbyBrowser['wrapPageElement']>;
 type GatsbySSRWrapPageElementParams = Parameters<GatsbySSR['wrapPageElement']>;

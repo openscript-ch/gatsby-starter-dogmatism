@@ -21,7 +21,7 @@ This is a quite opinionated Gatsby starter based on [Gatsby's default starter](h
 
 ## Configuration
 
-- [gatsby-config.ts](./.gatsby/gatsby-config):
+- [gatsby-config.ts](./.gatsby/gatsby-config.ts):
 
   - `siteMetadata.title`: Set the websites title
 

@@ -49,6 +49,13 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${projectRoot}/content/data`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-emotion`,
       options: {
         // Accepts the following options, all of which are defined by `@emotion/babel-plugin` plugin.
