@@ -1,6 +1,7 @@
 import { TSConfigFn } from 'gatsby-plugin-ts-config';
 import deCHMessages from '../content/i18n/de-CH.json';
 import enUSMessages from '../content/i18n/en-US.json';
+import zhCNMessages from '../content/i18n/zh-CN.json';
 import packageJson from '../package.json';
 
 require('dotenv').config({
@@ -91,6 +92,12 @@ const configuration: TSConfigFn<'config'> = ({ projectRoot }) => ({
             prefix: `de`,
             slugs: {},
             messages: deCHMessages,
+          },
+          {
+            locale: `zh-CN`,
+            prefix: `zh`,
+            slugs: {},
+            messages: zhCNMessages,
           },
         ],
       },

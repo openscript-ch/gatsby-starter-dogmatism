@@ -1,5 +1,6 @@
 /// <reference types="@emotion/react/types/css-prop" />
 import '@emotion/react';
+import { GatsbyBrowser, GatsbySSR, PluginOptions } from 'gatsby';
 
 declare module '@emotion/react' {
   export interface Theme {
@@ -14,3 +15,12 @@ declare module '@emotion/react' {
     };
   }
 }
+
+type GatsbyBrowserWrapPageElementParams = Parameters<GatsbyBrowser['wrapPageElement']>;
+type GatsbySSRWrapPageElementParams = Parameters<GatsbySSR['wrapPageElement']>;
+type GatsbyBrowserWrapPageElementReturnType = ReturnType<GatsbyBrowser['wrapPageElement']>;
+type GatsbySSRWrapPageElementReturnType = ReturnType<GatsbySSR['wrapPageElement']>;
+export type WrapPageElement = (
+  args: GatsbyBrowserWrapPageElementParams[0] | GatsbySSRWrapPageElementParams[0],
+  options: PluginOptions
+) => GatsbyBrowserWrapPageElementReturnType | GatsbySSRWrapPageElementReturnType;

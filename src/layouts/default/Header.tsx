@@ -1,10 +1,13 @@
 import { css, Theme } from '@emotion/react';
+import LanguageSelector from './LanguageSelector';
 
 const headerStyle = (theme: Theme) => css`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 6rem;
   font-size: 2rem;
+  font-weight: bold;
   background-color: ${theme.secondaryColor};
 `;
 
@@ -13,5 +16,10 @@ type HeaderProps = {
 };
 
 export function Header({ title }: HeaderProps) {
-  return <header css={headerStyle}>{title}</header>;
+  return (
+    <header css={headerStyle}>
+      {title}
+      <LanguageSelector />
+    </header>
+  );
 }

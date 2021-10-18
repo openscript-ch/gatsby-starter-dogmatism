@@ -1,10 +1,13 @@
 import { Helmet } from 'react-helmet';
 
-export function Document() {
+type DocumentProps = {
+  title: string;
+};
+
+export function Document({ title }: DocumentProps) {
   return (
     <Helmet>
-      <html />
-      <title>Gatsby Starter Dogmatism</title>
+      <title>{title}</title>
     </Helmet>
   );
 }

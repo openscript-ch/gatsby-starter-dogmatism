@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { PropsWithChildren } from 'react';
 import { DefaultLayoutQuery } from '../../graphql-types';
 import { defaultTheme } from '../themes/defaultTheme';
+import { Document } from './default/Document';
 import { Footer } from './default/Footer';
 import { Header } from './default/Header';
 import { Main } from './default/Main';
@@ -59,6 +60,7 @@ export function DefaultLayout({ children, theme }: DefaultLayoutProps) {
 
   return (
     <ThemeProvider theme={theme || defaultTheme}>
+      <Document title={data.site?.siteMetadata?.title || ''} />
       <Global styles={globalStyles} />
       <Header title={data.site?.siteMetadata?.title || ''} />
       <Main>{children}</Main>
