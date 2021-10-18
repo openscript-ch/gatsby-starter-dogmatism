@@ -21,4 +21,9 @@ This is a quite opinionated Gatsby starter based on [Gatsby's default starter](h
 
 ## Configuration
 
-- Most configuration is done in [gatsby-config.ts](./.gatsby/gatsby-config).
+- [gatsby-config.ts](./.gatsby/gatsby-config):
+
+  - `siteMetadata.title`: Set the websites title
+
+- Environment variables:
+  - `PATH_PREFIX`: Adds a prefix to all paths. This is useful if you host this project on a subpath like `https://example.github.io/gatsby-starter-dogmatism`.
