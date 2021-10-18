@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-404-tsx",
     "path": "/404",
-    "result": {"pageContext":{"locale":"en-US","alternativeLanguagePaths":[{"locale":"de-CH","path":"/de/404"}]}},
+    "result": {"pageContext":{"locale":"en-US","alternativeLanguagePaths":[{"locale":"de-CH","path":"/de/404"},{"locale":"zh-CN","path":"/zh/404"}]}},
     "staticQueryHashes": ["2670326781"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-index-tsx",
+    "path": "/zh/",
+    "result": {"pageContext":{"locale":"zh-CN","alternativeLanguagePaths":[{"locale":"en-US","path":"/"},{"locale":"de-CH","path":"/de/"}]}},
+    "staticQueryHashes": ["2670326781"]}
