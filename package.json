@@ -20,6 +20,7 @@
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-transformer-remark": "^5.0.0",
     "gatsby-transformer-sharp": "^4.0.0",
+    "gatsby-ts": "^1.0.0-rc.1",
     "graphql": "15.5.3",
     "limax": "^3.0.0",
     "react": "^17.0.2",
@@ -36,7 +37,6 @@
     "@types/react-helmet": "^6.1.4",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
-    "gatsby-plugin-ts-config": "2.1.3",
     "prettier": "2.4.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
@@ -46,14 +46,14 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby-ts build",
     "build:types": "graphql-codegen --config codegen.yml",
-    "build:with-prefix": "gatsby build --prefix-paths",
-    "develop": "gatsby develop",
+    "build:with-prefix": "gatsby-ts build --prefix-paths",
+    "develop": "gatsby-ts develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "yarn run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "serve": "gatsby-ts serve",
+    "clean": "gatsby-ts clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

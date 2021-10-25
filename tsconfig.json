@@ -1,5 +1,5 @@
 {
-  "include": ["./src/**/*", "./.gatsby/**/*", "./graphql-types.ts", "gatsby-browser.ts", "gatsby-ssr.ts"],
+  "include": ["./src/**/*", "./.gatsby/**/*", "./*.ts", "./plugins/**/*"],
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",

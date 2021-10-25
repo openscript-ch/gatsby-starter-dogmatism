@@ -7,23 +7,24 @@ import { findClosestLocale } from '../utils/i18n';
 export const translateNode: onCreateNode = async ({ getNode, node, actions }, options) => {
   const { createNodeField } = actions;
 
-  if ((node.internal.type === 'MarkdownRemark' || node.internal.type === 'Mdx') && node.parent) {
+  if ((node.internal.type === 'MarkdownRemark' || node.internal.type === 'Mdx') && node.parent && options) {
     const fileSystemNode = getNode(node.parent);
     const { name, relativeDirectory } = fileSystemNode as FileSystemNode;
     const nameMatch = name.match(/^(\w+)(.+)?\.(\w+)$/);
     const filename = nameMatch && nameMatch[1] ? nameMatch[1] : name;
     const estimatedLocale = nameMatch && nameMatch[3] ? nameMatch[3] : options.defaultLocale;
-    const locale = findClosestLocale(
-      estimatedLocale,
-      options.locales.map(l => l.locale)
-    );
+    const locale =
+      findClosestLocale(
+        estimatedLocale,
+        options.locales.map(l => l.locale)
+      ) || estimatedLocale;
     const { title } = node['frontmatter'] as { title?: string };
     const slug = title ? convertToSlug(title) : filename;
     const kind = relativeDirectory.split('/')[0] || '';
 
     const localeOption = options.locales.find(l => l.locale === locale);
-    let path = addLocalePrefix(`/${relativeDirectory}/${slug}`, locale, localeOption.prefix, options.defaultLocale);
-    if (kind) {
+    let path = addLocalePrefix(`/${relativeDirectory}/${slug}`, locale, localeOption?.prefix || '', options.defaultLocale);
+    if (kind && localeOption) {
       path = path.replace(`/${kind}`, localeOption.slugs[`/${kind}`] || `/${kind}`);
     }
 

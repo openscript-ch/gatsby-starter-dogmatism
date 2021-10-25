@@ -10,13 +10,19 @@ export type PluginOptions = {
   }[];
 } & GatsbyPluginOptions;
 
-export type onCreatePage = (args: Parameters<GatsbyNode['onCreatePage']>[0], options?: PluginOptions) => ReturnType<GatsbyNode['onCreatePage']>;
-export type onCreateNode = (args: Parameters<GatsbyNode['onCreateNode']>[0], options?: PluginOptions) => ReturnType<GatsbyNode['onCreateNode']>;
+type GatsbyNodeOnCreatePage = NonNullable<GatsbyNode['onCreatePage']>;
+type GatsbyNodeOnCreateNode = NonNullable<GatsbyNode['onCreateNode']>;
 
-type GatsbyBrowserWrapPageElementParams = Parameters<GatsbyBrowser['wrapPageElement']>;
-type GatsbySSRWrapPageElementParams = Parameters<GatsbySSR['wrapPageElement']>;
-type GatsbyBrowserWrapPageElementReturnType = ReturnType<GatsbyBrowser['wrapPageElement']>;
-type GatsbySSRWrapPageElementReturnType = ReturnType<GatsbySSR['wrapPageElement']>;
+export type onCreatePage = (args: Parameters<GatsbyNodeOnCreatePage>[0], options?: PluginOptions) => ReturnType<GatsbyNodeOnCreatePage>;
+export type onCreateNode = (args: Parameters<GatsbyNodeOnCreateNode>[0], options?: PluginOptions) => ReturnType<GatsbyNodeOnCreateNode>;
+
+type GatsbyBrowserWrapPageElement = NonNullable<GatsbyBrowser['wrapPageElement']>;
+type GatsbySSRWrapPageElement = NonNullable<GatsbySSR['wrapPageElement']>;
+
+type GatsbyBrowserWrapPageElementParams = Parameters<GatsbyBrowserWrapPageElement>;
+type GatsbySSRWrapPageElementParams = Parameters<GatsbySSRWrapPageElement>;
+type GatsbyBrowserWrapPageElementReturnType = ReturnType<GatsbyBrowserWrapPageElement>;
+type GatsbySSRWrapPageElementReturnType = ReturnType<GatsbySSRWrapPageElement>;
 export type WrapPageElement = (
   args: GatsbyBrowserWrapPageElementParams[0] | GatsbySSRWrapPageElementParams[0],
   options: PluginOptions
