@@ -2877,10 +2877,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.2.tgz#31c249c136c3f9b35d4b60fb8e50e01a1f0cc9a5"
   integrity sha512-w34LtBB0OkDTs19FQHXy4Ig/TOXI4zqvXS2Kk1PAsRKZ0I+nik7LlMYxckW0tSNGtvWmzB+mrCTbuEjuB9DVsw==
 
-"@types/node@^16.11.4":
-  version "16.11.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.4.tgz#90771124822d6663814f7c1c9b45a6654d8fd964"
-  integrity sha512-TMgXmy0v2xWyuCSCJM6NCna2snndD8yvQF67J29ipdzMcsPa9u+o0tjF5+EQNdhcuZplYuouYqpc4zcd5I6amQ==
+"@types/node@^16.11.6":
+  version "16.11.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.6.tgz#6bef7a2a0ad684cf6e90fcfe31cecabd9ce0a3ae"
+  integrity sha512-ua7PgUoeQFjmWPcoo9khiPum3Pd60k4/2ZGXt18sm2Slk0W0xZTqt5Y0Ny1NyBiN1EVQ/+FaF9NcY4Qe6rwk5w==
 
 "@types/node@^8.5.7":
   version "8.10.66"
@@ -6704,10 +6704,10 @@ gatsby-plugin-react-helmet@^5.0.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-sharp@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.0.0.tgz#4f837a725c8fccdff982d9d1baa9c5ea59ce6317"
-  integrity sha512-2xeTi2vnEorKph33Th0FAVawpr+y9D0O4hhw2Wecwywu+oWnJLq9JmEXgD1DVj4kvCZUYAA9nAna7agnhOpfVQ==
+gatsby-plugin-sharp@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.0.1.tgz#342f5234f288ded8adade7cd9ef2680e2b7f4f50"
+  integrity sha512-j9rw5uZeYQJ3b60l4mtwTkcvmxeQ0TFID7mZw0ULovMwOJvT5R6xerXMbj57SjAom8+RK1NvWlfQcWRAg9aypg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     async "^3.2.1"
@@ -6981,10 +6981,10 @@ gatsby-worker@^1.0.0:
     "@babel/core" "^7.15.5"
     "@babel/runtime" "^7.15.4"
 
-gatsby@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-4.0.0.tgz#48dcff2986a109ef34feee4d2873f95c6580eb5b"
-  integrity sha512-tLQ+8ppmRswnuSCMCElJYNTDKiwY89RQE/O85ETfeYVfFmGOKdgY1u/q85QFbGrY2+pkf5ZVaWd206u0jEMOhw==
+gatsby@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-4.0.2.tgz#bb1f9a12876b1ca0d0e2646b99281bb7da70613e"
+  integrity sha512-ijdRh6NXDXJashI5Yjk8NddwVNJT+oZ7aFIjcT184dFzRJ7RNGau8wDLJCuwe1CafFlWsAyNp4oRingYP4B6jg==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/core" "^7.15.5"
