@@ -1,4 +1,5 @@
 import { graphql } from 'gatsby';
+import { Markup } from 'interweave';
 import { IndexPageQuery } from '../../graphql-types';
 import { DefaultLayout } from '../layouts/DefaultLayout';
 
@@ -7,7 +8,11 @@ type IndexPageProps = {
 };
 
 export default function IndexPage({ data }: IndexPageProps) {
-  return <DefaultLayout>{data.slogans?.html}</DefaultLayout>;
+  return (
+    <DefaultLayout>
+      <Markup content={data.slogans?.html} />
+    </DefaultLayout>
+  );
 }
 
 export const query = graphql`
