@@ -1,6 +1,5 @@
 import React from 'react';
-import { SitePageContext } from '../graphql-types';
-import { WrapPageElement } from './types';
+import { SitePageContext, WrapPageElement } from './types';
 
 export const PageContext = React.createContext<SitePageContext>({});
 

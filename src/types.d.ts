@@ -16,6 +16,16 @@ declare module '@emotion/react' {
   }
 }
 
+export type SitePageContext = {
+  alternativeLanguagePaths?: AlternativeLanguagePath[];
+  locale?: Maybe<Scalars['String']>;
+};
+
+type AlternativeLanguagePath = {
+  locale?: Maybe<Scalars['String']>;
+  path?: Maybe<Scalars['String']>;
+};
+
 type GatsbyBrowserWrapPageElementParams = Parameters<GatsbyBrowser['wrapPageElement']>;
 type GatsbySSRWrapPageElementParams = Parameters<GatsbySSR['wrapPageElement']>;
 type GatsbyBrowserWrapPageElementReturnType = ReturnType<GatsbyBrowser['wrapPageElement']>;
