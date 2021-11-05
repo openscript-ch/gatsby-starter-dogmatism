@@ -21,8 +21,8 @@ describe('translateNode', () => {
 
     const parentNode = {
       name: 'page.de.md',
-      relativeDirectory: '/content/pages',
-      absolutePath: '/tmp/project/content/pages',
+      relativeDirectory: 'pages',
+      absolutePath: '/tmp/project/content/pages/page.de.md',
     };
 
     const args: any = {
@@ -59,6 +59,19 @@ describe('translateNode', () => {
     };
 
     await translateNode(args, options);
+
     expect(createNodeField).toHaveBeenCalledWith({ node, name: 'locale', value: 'de-CH' });
+    expect(createNodeField).toHaveBeenCalledWith({ node, name: 'filename', value: 'page' });
+    expect(createNodeField).toHaveBeenCalledWith({ node, name: 'kind', value: 'pages' });
+    expect(createNodeField).toHaveBeenCalledWith({ node, name: 'slug', value: 'page' });
+    expect(createNodeField).toHaveBeenCalledWith({ node, name: 'path', value: '/de/pages/page' });
+    expect(createNodeField).toHaveBeenCalledWith({
+      node,
+      name: 'translations',
+      value: [
+        { locale: 'en-US', path: '/pages/page' },
+        { locale: 'zh-CN', path: '/zh/pages/page' },
+      ],
+    });
   });
 });

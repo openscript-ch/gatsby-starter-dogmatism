@@ -17,7 +17,10 @@ export const translateNode: onCreateNode = async ({ getNode, node, actions }, op
     const locale = findLocale(estimatedLocale, options);
     const { slug, kind, filepath } = translatePath(filename, relativeDirectory, locale, options, title);
     const translations = await findTranslations(absolutePath, options);
-    const alternativeLanguagePaths = translations.map(t => translatePath(t.filename, relativeDirectory, t.locale, options));
+    const alternativeLanguagePaths = translations.map(t => {
+      const { filepath } = translatePath(t.filename, relativeDirectory, t.locale, options);
+      return { path: filepath, locale: t.locale };
+    });
 
     createNodeField({ node, name: 'locale', value: locale });
     createNodeField({ node, name: 'filename', value: filename });
