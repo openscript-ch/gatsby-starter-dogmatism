@@ -1,15 +1,13 @@
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { Markup } from 'interweave';
 import { IndexPageQuery } from '../../graphql-types';
 import { DefaultLayout } from '../layouts/DefaultLayout';
+import { SitePageContext } from '../types';
 
-type IndexPageProps = {
-  data: IndexPageQuery;
-};
-
-export default function IndexPage({ data }: IndexPageProps) {
+export default function IndexPage({ data, pageContext }: PageProps<IndexPageQuery, SitePageContext>) {
   return (
     <DefaultLayout>
+      {pageContext.locale}
       <Markup content={data.slogans?.html} />
     </DefaultLayout>
   );
