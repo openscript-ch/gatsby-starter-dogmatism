@@ -2,8 +2,8 @@ import { FileSystemNode } from 'gatsby-source-filesystem';
 import { onCreateNode, PluginOptions } from '../../types';
 import convertToSlug from 'limax';
 import { addLocalePrefix } from '../utils/path';
-import { findClosestLocale } from '../utils/i18n';
-import fs from 'fs';
+import { findClosestLocale, parseFilename } from '../utils/i18n';
+import fs from 'fs/promises';
 import path from 'path';
 
 export const translateNode: onCreateNode = async ({ getNode, node, actions }, options) => {
@@ -12,7 +12,7 @@ export const translateNode: onCreateNode = async ({ getNode, node, actions }, op
   if ((node.internal.type === 'MarkdownRemark' || node.internal.type === 'Mdx') && node.parent && options) {
     const fileSystemNode = getNode(node.parent);
     const { name, relativeDirectory, absolutePath } = fileSystemNode as FileSystemNode;
-    const { filename, estimatedLocale } = readFilename(name, options);
+    const { filename, estimatedLocale } = parseFilename(name, options.defaultLocale);
     const { title } = node['frontmatter'] as { title?: string };
     const locale = findLocale(estimatedLocale, options);
     const { slug, kind, filepath } = translatePath(filename, relativeDirectory, locale, options, title);
@@ -28,14 +28,6 @@ export const translateNode: onCreateNode = async ({ getNode, node, actions }, op
   }
 };
 
-const readFilename = (name: string, options: PluginOptions) => {
-  const nameMatch = name.match(/^(\w+)(.+)?\.(\w+)$/);
-  const filename = nameMatch && nameMatch[1] ? nameMatch[1] : name;
-  const estimatedLocale = nameMatch && nameMatch[3] ? nameMatch[3] : options.defaultLocale;
-
-  return { filename, estimatedLocale };
-};
-
 const findLocale = (estimatedLocale: string, options: PluginOptions) => {
   return (
     findClosestLocale(
@@ -46,15 +38,15 @@ const findLocale = (estimatedLocale: string, options: PluginOptions) => {
 };
 
 const findTranslations = async (absolutePath: string, options: PluginOptions) => {
-  const fileSiblings = await fs.promises.readdir(path.dirname(absolutePath));
-  const { filename } = readFilename(path.basename(absolutePath), options);
+  const fileSiblings = await fs.readdir(path.dirname(absolutePath));
+  const { filename } = parseFilename(path.basename(absolutePath), options.defaultLocale);
   const siblings = fileSiblings
     .filter(f => {
-      const { filename: siblingFilename } = readFilename(f, options);
+      const { filename: siblingFilename } = parseFilename(f, options.defaultLocale);
       return f !== path.basename(absolutePath) && siblingFilename === filename;
     })
     .map(f => {
-      const { filename: siblingFilename, estimatedLocale: siblingEstimatedLocale } = readFilename(f, options);
+      const { filename: siblingFilename, estimatedLocale: siblingEstimatedLocale } = parseFilename(f, options.defaultLocale);
       const locale = findLocale(siblingEstimatedLocale, options);
       return { filename: siblingFilename, locale };
     });
