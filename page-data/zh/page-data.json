@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-tsx",
     "path": "/zh/",
-    "result": {"data":{"slogans":{"html":"<p>Chinese</p>"}},"pageContext":{"locale":"zh-CN","alternativeLanguagePaths":[{"locale":"en-US","path":"/"},{"locale":"de-CH","path":"/de/"}]}},
+    "result": {"data":{"slogans":null},"pageContext":{"locale":"zh-CN","alternativeLanguagePaths":[{"locale":"en-US","path":"/"},{"locale":"de-CH","path":"/de/"}]}},
     "staticQueryHashes": ["2670326781"]}
