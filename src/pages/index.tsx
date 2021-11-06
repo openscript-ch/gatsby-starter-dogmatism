@@ -4,10 +4,9 @@ import { IndexPageQuery } from '../../graphql-types';
 import { DefaultLayout } from '../layouts/DefaultLayout';
 import { SitePageContext } from '../types';
 
-export default function IndexPage({ data, pageContext }: PageProps<IndexPageQuery, SitePageContext>) {
+export default function IndexPage({ data }: PageProps<IndexPageQuery, SitePageContext>) {
   return (
     <DefaultLayout>
-      {pageContext.locale}
       <Markup content={data.slogans?.html} />
     </DefaultLayout>
   );
