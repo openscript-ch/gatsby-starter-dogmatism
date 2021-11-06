@@ -1,9 +1,9 @@
 import { GatsbyNode } from 'gatsby';
-import { CreateWikiPages } from './src/gatsby/createPages/createWikiPages';
+import { CreateGenericPages } from './src/gatsby/createPages/createGenericPages';
 
 const node: GatsbyNode = {
   createPages: async args => {
-    await CreateWikiPages(args);
+    await CreateGenericPages(args);
   },
   onCreateNode: async args => {},
 };

@@ -661,6 +661,9 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkFieldsLocale = 'childMarkdownRemark___fields___locale',
   ChildMarkdownRemarkFieldsPath = 'childMarkdownRemark___fields___path',
   ChildMarkdownRemarkFieldsSlug = 'childMarkdownRemark___fields___slug',
+  ChildMarkdownRemarkFieldsTranslations = 'childMarkdownRemark___fields___translations',
+  ChildMarkdownRemarkFieldsTranslationsLocale = 'childMarkdownRemark___fields___translations___locale',
+  ChildMarkdownRemarkFieldsTranslationsPath = 'childMarkdownRemark___fields___translations___path',
   ChildMarkdownRemarkFileAbsolutePath = 'childMarkdownRemark___fileAbsolutePath',
   ChildMarkdownRemarkFrontmatterTitle = 'childMarkdownRemark___frontmatter___title',
   ChildMarkdownRemarkHeadings = 'childMarkdownRemark___headings',
@@ -793,6 +796,9 @@ export enum FileFieldsEnum {
   ChildrenMarkdownRemarkFieldsLocale = 'childrenMarkdownRemark___fields___locale',
   ChildrenMarkdownRemarkFieldsPath = 'childrenMarkdownRemark___fields___path',
   ChildrenMarkdownRemarkFieldsSlug = 'childrenMarkdownRemark___fields___slug',
+  ChildrenMarkdownRemarkFieldsTranslations = 'childrenMarkdownRemark___fields___translations',
+  ChildrenMarkdownRemarkFieldsTranslationsLocale = 'childrenMarkdownRemark___fields___translations___locale',
+  ChildrenMarkdownRemarkFieldsTranslationsPath = 'childrenMarkdownRemark___fields___translations___path',
   ChildrenMarkdownRemarkFileAbsolutePath = 'childrenMarkdownRemark___fileAbsolutePath',
   ChildrenMarkdownRemarkFrontmatterTitle = 'childrenMarkdownRemark___frontmatter___title',
   ChildrenMarkdownRemarkHeadings = 'childrenMarkdownRemark___headings',
@@ -1716,6 +1722,7 @@ export type MarkdownRemarkFields = {
   locale?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
+  translations?: Maybe<Array<Maybe<MarkdownRemarkFieldsTranslations>>>;
 };
 
 export enum MarkdownRemarkFieldsEnum {
@@ -1765,6 +1772,9 @@ export enum MarkdownRemarkFieldsEnum {
   FieldsLocale = 'fields___locale',
   FieldsPath = 'fields___path',
   FieldsSlug = 'fields___slug',
+  FieldsTranslations = 'fields___translations',
+  FieldsTranslationsLocale = 'fields___translations___locale',
+  FieldsTranslationsPath = 'fields___translations___path',
   FileAbsolutePath = 'fileAbsolutePath',
   FrontmatterTitle = 'frontmatter___title',
   Headings = 'headings',
@@ -1834,6 +1844,22 @@ export type MarkdownRemarkFieldsFilterInput = {
   locale?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
+  translations?: Maybe<MarkdownRemarkFieldsTranslationsFilterListInput>;
+};
+
+export type MarkdownRemarkFieldsTranslations = {
+  __typename?: 'MarkdownRemarkFieldsTranslations';
+  locale?: Maybe<Scalars['String']>;
+  path?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFieldsTranslationsFilterInput = {
+  locale?: Maybe<StringQueryOperatorInput>;
+  path?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFieldsTranslationsFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFieldsTranslationsFilterInput>;
 };
 
 export type MarkdownRemarkFilterInput = {
@@ -2203,6 +2229,7 @@ export type QuerySiteArgs = {
   host?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   internal?: Maybe<InternalFilterInput>;
+  jsxRuntime?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
@@ -2273,6 +2300,7 @@ export type Site = Node & {
   host?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   internal: Internal;
+  jsxRuntime?: Maybe<Scalars['String']>;
   parent?: Maybe<Node>;
   pathPrefix?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
@@ -2595,6 +2623,7 @@ export enum SiteFieldsEnum {
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
   InternalType = 'internal___type',
+  JsxRuntime = 'jsxRuntime',
   ParentChildren = 'parent___children',
   ParentChildrenChildren = 'parent___children___children',
   ParentChildrenChildrenChildren = 'parent___children___children___children',
@@ -2649,6 +2678,7 @@ export type SiteFilterInput = {
   host?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   internal?: Maybe<InternalFilterInput>;
+  jsxRuntime?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
@@ -3482,6 +3512,11 @@ export type GatsbyImageSharpFluid_NoBase64Fragment = { __typename?: 'ImageSharpF
 
 export type GatsbyImageSharpFluid_WithWebp_NoBase64Fragment = { __typename?: 'ImageSharpFluid', aspectRatio: number, src: string, srcSet: string, srcWebp?: string | null | undefined, srcSetWebp?: string | null | undefined, sizes: string };
 
+export type AllGenericPagesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllGenericPagesQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, fields?: { __typename?: 'MarkdownRemarkFields', path?: string | null | undefined } | null | undefined } }> } };
+
 export type DefaultLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3493,3 +3528,10 @@ export type IndexPageQueryVariables = Exact<{
 
 
 export type IndexPageQuery = { __typename?: 'Query', slogans?: { __typename?: 'MarkdownRemark', html?: string | null | undefined } | null | undefined };
+
+export type GenericPageQueryVariables = Exact<{
+  id: Scalars['String'];
+}>;
+
+
+export type GenericPageQuery = { __typename?: 'Query', markdownRemark?: { __typename?: 'MarkdownRemark', id: string, html?: string | null | undefined } | null | undefined };
