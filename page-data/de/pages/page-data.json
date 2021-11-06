@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-generic-page-tsx",
+    "path": "/de/pages",
+    "result": {"data":{"markdownRemark":{"id":"9e0889d1-f13b-5f7a-b75a-b990f5ec9cd3","html":"<p>EN</p>"}},"pageContext":{"id":"9e0889d1-f13b-5f7a-b75a-b990f5ec9cd3","locale":"de-CH","alternativeLanguagePaths":[{"locale":"en-US","path":"/pages"},{"locale":"zh-CN","path":"/zh/pages"}]}},
+    "staticQueryHashes": ["2670326781"]}
