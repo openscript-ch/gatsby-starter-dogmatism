@@ -1,5 +1,15 @@
 import { GatsbyBrowser, GatsbyNode, GatsbySSR, PluginOptions as GatsbyPluginOptions } from 'gatsby';
 
+declare module 'gatsby' {
+  export interface Page<TContext = Record<string, unknown>> {
+    path: string;
+    matchPath?: string;
+    component: string;
+    context: TContext;
+    isCreatedByStatefulCreatePages?: boolean;
+  }
+}
+
 export type PluginOptions = {
   defaultLocale: string;
   locales: {

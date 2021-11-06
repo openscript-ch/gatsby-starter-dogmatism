@@ -3,7 +3,9 @@ import { translatePagePaths } from '../utils/path';
 
 export const translatePage: onCreatePage = async ({ page, actions }, options) => {
   const { createPage, deletePage } = actions;
-  if (options) {
+
+  // Only for pages created by stateful create pages like `/src/pages`
+  if (options && page.isCreatedByStatefulCreatePages) {
     const paths = translatePagePaths(page.path, options);
 
     deletePage(page);
