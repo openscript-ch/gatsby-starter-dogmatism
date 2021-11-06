@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-generic-page-tsx",
-    "path": "/zh/de/pages/another",
-    "result": {"data":{"markdownRemark":{"id":"b4e4a740-9c16-5638-9414-98d6c3ed284d","html":"<p>another</p>"}},"pageContext":{"id":"b4e4a740-9c16-5638-9414-98d6c3ed284d","locale":"zh-CN","alternativeLanguagePaths":[{"locale":"en-US","path":"/de/pages/another"},{"locale":"de-CH","path":"/de/de/pages/another"}]}},
-    "staticQueryHashes": ["2670326781"]}

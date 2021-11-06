@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-generic-page-tsx",
-    "path": "/zh/de/pages/questions/first-question",
-    "result": {"data":{"markdownRemark":{"id":"7020e816-9ec6-541e-8e19-d2c6089d56ed","html":"<p>de</p>"}},"pageContext":{"id":"7020e816-9ec6-541e-8e19-d2c6089d56ed","locale":"zh-CN","alternativeLanguagePaths":[{"locale":"en-US","path":"/de/pages/questions/first-question"},{"locale":"de-CH","path":"/de/de/pages/questions/first-question"}]}},
-    "staticQueryHashes": ["2670326781"]}

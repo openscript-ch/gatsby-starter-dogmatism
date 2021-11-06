@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-generic-page-tsx",
-    "path": "/de/pages",
-    "result": {"data":{"markdownRemark":{"id":"9e0889d1-f13b-5f7a-b75a-b990f5ec9cd3","html":"<p>EN</p>"}},"pageContext":{"id":"9e0889d1-f13b-5f7a-b75a-b990f5ec9cd3","locale":"de-CH","alternativeLanguagePaths":[{"locale":"en-US","path":"/pages"},{"locale":"zh-CN","path":"/zh/pages"}]}},
+    "path": "/de/pages/",
+    "result": {"data":{"markdownRemark":{"id":"01688eb2-0db7-5e70-8c2b-75aa1cc8d57a","html":"<p>DE</p>"}},"pageContext":{"id":"01688eb2-0db7-5e70-8c2b-75aa1cc8d57a"}},
     "staticQueryHashes": ["2670326781"]}
