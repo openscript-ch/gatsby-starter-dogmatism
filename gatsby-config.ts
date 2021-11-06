@@ -19,6 +19,15 @@ const configuration = withMetaConfig(({ projectRoot }) => {
       version: packageJson.version,
     },
     plugins: [
+      // Sources
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `data`,
+          path: `${projectRoot}/content/data`,
+        },
+      },
+
       // Transformers
       `gatsby-transformer-sharp`,
       {
@@ -42,20 +51,6 @@ const configuration = withMetaConfig(({ projectRoot }) => {
       // Plugins
       `gatsby-plugin-react-helmet`,
       `gatsby-plugin-image`,
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `pages`,
-          path: `${projectRoot}/src/pages`,
-        },
-      },
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `data`,
-          path: `${projectRoot}/content/data`,
-        },
-      },
       {
         resolve: `gatsby-plugin-emotion`,
         options: {
