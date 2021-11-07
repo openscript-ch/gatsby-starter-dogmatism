@@ -27,6 +27,16 @@ const node: GatsbyNode = {
   onCreatePage: async (args, options: PluginOptions) => {
     await translatePage(args, options);
   },
+
+  onCreateWebpackConfig: async ({ actions }) => {
+    actions.setWebpackConfig({
+      resolve: {
+        fallback: {
+          path: require.resolve('path-browserify'),
+        },
+      },
+    });
+  },
 };
 
 export default node;

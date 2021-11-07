@@ -17,6 +17,7 @@ const configuration = withMetaConfig(({ projectRoot }) => {
       author: `openscript`,
       siteUrl: process.env.SITE_URL || `https://example.com`,
       version: packageJson.version,
+      project: packageJson.name,
     },
     plugins: [
       // Sources

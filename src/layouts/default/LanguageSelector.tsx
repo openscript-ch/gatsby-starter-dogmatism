@@ -25,7 +25,7 @@ export default function LanguageSelector() {
   return (
     <nav css={languageSelectorStyles}>
       <ul>
-        {pageContext.alternativeLanguagePaths?.map(p => (
+        {pageContext.translations?.map(p => (
           <li key={p.locale}>
             <Link to={p?.path || ''}>
               <FormattedMessage id={`languages.${p?.locale}`} />

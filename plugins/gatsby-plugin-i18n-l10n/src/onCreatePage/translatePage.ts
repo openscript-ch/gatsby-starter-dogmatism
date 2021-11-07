@@ -11,8 +11,8 @@ export const translatePage: onCreatePage = async ({ page, actions }, options) =>
     deletePage(page);
 
     paths.forEach(path => {
-      const alternativeLanguagePaths = paths.filter(p => p.locale !== path.locale);
-      const context = { ...page.context, locale: path.locale, alternativeLanguagePaths };
+      const translations = paths.filter(p => p.locale !== path.locale);
+      const context = { ...page.context, locale: path.locale, translations };
       createPage({ ...page, path: path.path, context });
     });
   }

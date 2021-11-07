@@ -21,12 +21,14 @@ export const translateNode: onCreateNode = async ({ getNode, node, actions }, op
       const { filepath } = translatePath(t.filename, relativeDirectory, t.locale, options);
       return { path: filepath, locale: t.locale };
     });
+    const localeOption = options.locales.find(l => l.locale === locale);
 
     createNodeField({ node, name: 'locale', value: locale });
     createNodeField({ node, name: 'filename', value: filename });
     createNodeField({ node, name: 'kind', value: kind });
     createNodeField({ node, name: 'slug', value: slug });
     createNodeField({ node, name: 'path', value: filepath });
+    createNodeField({ node, name: 'pathPrefix', value: localeOption?.prefix });
     createNodeField({ node, name: 'translations', value: alternativeLanguagePaths });
   }
 };

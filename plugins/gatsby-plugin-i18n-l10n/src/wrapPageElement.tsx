@@ -1,10 +1,13 @@
+import React from 'react';
 import { IntlProvider } from 'react-intl';
-import { WrapPageElement } from '../types';
+import { SitePageContext, WrapPageElement } from '../types';
 import I18nHead from './components/I18nHead';
 
+export const PageContext = React.createContext<SitePageContext>({});
+
 export const wrapPageElement: WrapPageElement = ({ element, props }, options) => {
-  const context = props.pageContext;
-  const currentLocale = (context['locale'] as string) ?? options.defaultLocale;
+  const pageContext = props.pageContext;
+  const currentLocale = (pageContext['locale'] as string) ?? options.defaultLocale;
   const currentMessages = options.locales.find(l => l.locale === currentLocale)?.messages;
 
   if (currentMessages) {
@@ -13,9 +16,11 @@ export const wrapPageElement: WrapPageElement = ({ element, props }, options) =>
   }
 
   return (
-    <IntlProvider defaultLocale={options.defaultLocale} locale={currentLocale} messages={currentMessages}>
-      <I18nHead currentLocale={currentLocale} />
-      {element}
-    </IntlProvider>
+    <PageContext.Provider value={{ currentLocale }}>
+      <IntlProvider defaultLocale={options.defaultLocale} locale={currentLocale} messages={currentMessages}>
+        <I18nHead currentLocale={currentLocale} />
+        {element}
+      </IntlProvider>
+    </PageContext.Provider>
   );
 };

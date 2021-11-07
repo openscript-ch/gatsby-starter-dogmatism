@@ -17,7 +17,7 @@ declare module '@emotion/react' {
 }
 
 export type SitePageContext = {
-  alternativeLanguagePaths?: AlternativeLanguagePath[];
+  translations?: Translations[];
   locale?: Maybe<Scalars['String']>;
 };
 

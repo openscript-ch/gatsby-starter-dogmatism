@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import LanguageSelector from './LanguageSelector';
+import MainNavigation from './MainNavigation';
 
 const headerStyle = (theme: Theme) => css`
   display: flex;
@@ -19,6 +20,7 @@ export function Header({ title }: HeaderProps) {
   return (
     <header css={headerStyle}>
       {title}
+      <MainNavigation />
       <LanguageSelector />
     </header>
   );

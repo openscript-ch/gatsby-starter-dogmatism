@@ -2667,6 +2667,7 @@ export enum SiteFieldsEnum {
   Port = 'port',
   SiteMetadataAuthor = 'siteMetadata___author',
   SiteMetadataDescription = 'siteMetadata___description',
+  SiteMetadataProject = 'siteMetadata___project',
   SiteMetadataSiteUrl = 'siteMetadata___siteUrl',
   SiteMetadataTitle = 'siteMetadata___title',
   SiteMetadataVersion = 'siteMetadata___version'
@@ -3441,6 +3442,7 @@ export type SiteSiteMetadata = {
   __typename?: 'SiteSiteMetadata';
   author?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
+  project?: Maybe<Scalars['String']>;
   siteUrl?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
   version?: Maybe<Scalars['String']>;
@@ -3449,6 +3451,7 @@ export type SiteSiteMetadata = {
 export type SiteSiteMetadataFilterInput = {
   author?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
+  project?: Maybe<StringQueryOperatorInput>;
   siteUrl?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   version?: Maybe<StringQueryOperatorInput>;
@@ -3520,7 +3523,7 @@ export type AllGenericPagesQuery = { __typename?: 'Query', allMarkdownRemark: { 
 export type DefaultLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type DefaultLayoutQuery = { __typename?: 'Query', site?: { __typename?: 'Site', siteMetadata?: { __typename?: 'SiteSiteMetadata', author?: string | null | undefined, description?: string | null | undefined, siteUrl?: string | null | undefined, title?: string | null | undefined, version?: string | null | undefined } | null | undefined } | null | undefined };
+export type DefaultLayoutQuery = { __typename?: 'Query', site?: { __typename?: 'Site', siteMetadata?: { __typename?: 'SiteSiteMetadata', author?: string | null | undefined, description?: string | null | undefined, siteUrl?: string | null | undefined, title?: string | null | undefined, version?: string | null | undefined, project?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type IndexPageQueryVariables = Exact<{
   locale?: Maybe<Scalars['String']>;
