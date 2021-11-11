@@ -4,6 +4,10 @@ export const trimRightSlash = (path: string) => {
   return path === '/' ? path : path.replace(/\/$/, '');
 };
 
+export const trimSlashes = (path: string) => {
+  return path === '/' ? path : path.replace(/^\/|\/$/g, '');
+};
+
 export const addLocalePrefix = (path: string, locale: string, prefix: string, defaultLocale: string) => {
   return locale !== defaultLocale ? `/${prefix}${path}` : path;
 };
@@ -15,4 +19,21 @@ export const translatePagePaths = (path: string, options: PluginOptions) => {
 
     return { locale: locale.locale, path: addLocalePrefix(newPath, locale.locale, locale.prefix, options.defaultLocale) };
   });
+};
+
+export const parsePathPrefix = (path: string, defaultPrefix: string) => {
+  if (path === '/') {
+    return defaultPrefix;
+  }
+
+  const splittedPath = path.match(/(?<=^\/)\w{2}(\-\w{2})?(?=\/)/g);
+  return splittedPath && splittedPath[0] ? splittedPath[0] : defaultPrefix;
+};
+
+export const generatePageContext = (path: string, options: PluginOptions) => {
+  const defaultPrefix = options.locales.find(l => l.locale === options.defaultLocale)?.prefix;
+  const parsedPrefix = parsePathPrefix(path, defaultPrefix ?? '');
+  const locale = options.locales.find(l => l.prefix === parsedPrefix);
+
+  return { locale: locale?.locale, prefix: locale?.prefix };
 };

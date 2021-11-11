@@ -1,5 +1,5 @@
 import { onCreatePage } from '../../types';
-import { translatePagePaths } from '../utils/path';
+import { generatePageContext, translatePagePaths } from '../utils/path';
 
 export const translatePage: onCreatePage = async ({ page, actions }, options) => {
   const { createPage, deletePage } = actions;
@@ -12,8 +12,16 @@ export const translatePage: onCreatePage = async ({ page, actions }, options) =>
 
     paths.forEach(path => {
       const translations = paths.filter(p => p.locale !== path.locale);
-      const context = { ...page.context, locale: path.locale, translations };
+      const locale = options.locales.find(l => l.locale === path.locale);
+      const context = { ...page.context, locale: path.locale, translations, ...locale };
       createPage({ ...page, path: path.path, context });
     });
+  }
+
+  if (options) {
+    deletePage(page);
+    const locale = generatePageContext(page.path, options);
+    const context = { ...page.context, ...locale };
+    createPage({ ...page, context });
   }
 };
