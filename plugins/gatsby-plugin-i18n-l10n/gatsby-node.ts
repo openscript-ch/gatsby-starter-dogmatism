@@ -1,4 +1,4 @@
-import { GatsbyNode, graphql } from 'gatsby';
+import { GatsbyNode } from 'gatsby';
 import { translateNode } from './src/onCreateNode/translateNode';
 import { translatePage } from './src/onCreatePage/translatePage';
 import { PluginOptions } from './types';

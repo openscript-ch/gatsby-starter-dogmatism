@@ -11,7 +11,8 @@ declare module 'gatsby' {
 }
 
 export type SitePageContext = {
-  currentLocale?: string;
+  locale?: string;
+  prefix?: string;
 };
 
 export type PluginOptions = {

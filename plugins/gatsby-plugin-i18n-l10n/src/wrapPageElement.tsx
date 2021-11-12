@@ -6,9 +6,10 @@ import I18nHead from './components/I18nHead';
 export const PageContext = React.createContext<SitePageContext>({});
 
 export const wrapPageElement: WrapPageElement = ({ element, props }, options) => {
-  const pageContext = props.pageContext;
-  const currentLocale = (pageContext['locale'] as string) ?? options.defaultLocale;
-  const currentMessages = options.locales.find(l => l.locale === currentLocale)?.messages;
+  const pageContext = props.pageContext as SitePageContext;
+  const locale = pageContext.locale ?? options.defaultLocale;
+  const prefix = pageContext.prefix ?? options.locales.find(l => l.locale === locale)?.prefix;
+  const currentMessages = options.locales.find(l => l.locale === locale)?.messages;
 
   if (currentMessages) {
     // Inject language names of all available languages into current messages
@@ -16,9 +17,9 @@ export const wrapPageElement: WrapPageElement = ({ element, props }, options) =>
   }
 
   return (
-    <PageContext.Provider value={{ currentLocale }}>
-      <IntlProvider defaultLocale={options.defaultLocale} locale={currentLocale} messages={currentMessages}>
-        <I18nHead currentLocale={currentLocale} />
+    <PageContext.Provider value={{ locale, prefix }}>
+      <IntlProvider defaultLocale={options.defaultLocale} locale={locale} messages={currentMessages}>
+        <I18nHead currentLocale={locale} />
         {element}
       </IntlProvider>
     </PageContext.Provider>
