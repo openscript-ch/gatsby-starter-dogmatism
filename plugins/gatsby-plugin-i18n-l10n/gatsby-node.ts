@@ -1,4 +1,4 @@
-import { GatsbyNode } from 'gatsby';
+import { GatsbyNode, graphql } from 'gatsby';
 import { translateNode } from './src/onCreateNode/translateNode';
 import { translatePage } from './src/onCreatePage/translatePage';
 import { PluginOptions } from './types';
@@ -26,6 +26,18 @@ const node: GatsbyNode = {
 
   onCreatePage: async (args, options: PluginOptions) => {
     await translatePage(args, options);
+  },
+
+  createSchemaCustomization: async ({ actions }) => {
+    actions.createTypes(`
+      type SitePage implements Node {
+        context: SitePageContext
+      }
+      type SitePageContext {
+        locale: String
+        prefix: String
+      }
+    `);
   },
 
   onCreateWebpackConfig: async ({ actions }) => {
