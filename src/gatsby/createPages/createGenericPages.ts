@@ -12,6 +12,10 @@ export async function CreateGenericPages({ actions, graphql }: CreatePagesArgs) 
             id
             fields {
               path
+              translations {
+                locale
+                path
+              }
             }
           }
         }
@@ -23,7 +27,7 @@ export async function CreateGenericPages({ actions, graphql }: CreatePagesArgs) 
     if (p.node.fields && p.node.fields.path) {
       createPage({
         component: resolve('./src/templates/GenericPage.tsx'),
-        context: { id: p.node.id },
+        context: { id: p.node.id, translations: p.node.fields.translations },
         path: p.node.fields.path,
       });
     }

@@ -15,7 +15,7 @@ export default function MainNavigation() {
     <nav css={navStyle}>
       <ul>
         <li>
-          <LocalizedLink to="pages">Joho</LocalizedLink>
+          <LocalizedLink to="/pages">Joho</LocalizedLink>
         </li>
       </ul>
     </nav>
