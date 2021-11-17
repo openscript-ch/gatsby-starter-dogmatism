@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import { LocalizedLink } from '../../../plugins/gatsby-plugin-i18n-l10n';
 import LanguageSelector from './LanguageSelector';
 import MainNavigation from './MainNavigation';
 
@@ -19,7 +20,7 @@ type HeaderProps = {
 export function Header({ title }: HeaderProps) {
   return (
     <header css={headerStyle}>
-      {title}
+      <LocalizedLink to="/">{title}</LocalizedLink>
       <MainNavigation />
       <LanguageSelector />
     </header>
