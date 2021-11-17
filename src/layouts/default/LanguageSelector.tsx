@@ -27,8 +27,8 @@ export default function LanguageSelector() {
       <ul>
         {pageContext.translations?.map(p => (
           <li key={p.locale}>
-            <Link to={p?.path || ''}>
-              <FormattedMessage id={`languages.${p?.locale}`} />
+            <Link to={p.path}>
+              <FormattedMessage id={`languages.${p.locale}`} />
             </Link>
           </li>
         ))}
