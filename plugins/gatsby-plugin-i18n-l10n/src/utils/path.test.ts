@@ -34,6 +34,10 @@ describe('addLocalePrefix', () => {
     const prefixed = addLocalePrefix('/path/to/rome', 'it', 'it', 'en');
     expect(prefixed).toBe('/it/path/to/rome');
   });
+  it("adds locale as prefix if it's not the default locale to index routes", () => {
+    const prefixed = addLocalePrefix('/', 'it', 'it', 'en');
+    expect(prefixed).toBe('/it');
+  });
   it("adds no locale if it's default locale", () => {
     const prefixed = addLocalePrefix('/path/to/rome', 'it', 'it', 'it');
     expect(prefixed).toBe('/path/to/rome');

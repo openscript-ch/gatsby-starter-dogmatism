@@ -1,3 +1,4 @@
+import path from 'path';
 import { PluginOptions } from '../../types';
 
 export const trimRightSlash = (path: string) => {
@@ -8,8 +9,8 @@ export const trimSlashes = (path: string) => {
   return path === '/' ? path : path.replace(/^\/|\/$/g, '');
 };
 
-export const addLocalePrefix = (path: string, locale: string, prefix: string, defaultLocale: string) => {
-  return locale !== defaultLocale ? `/${prefix}${path}` : path;
+export const addLocalePrefix = (currentPath: string, locale: string, prefix: string, defaultLocale: string) => {
+  return locale !== defaultLocale ? trimRightSlash(`/${path.join(prefix, currentPath)}`) : currentPath;
 };
 
 export const translatePagePaths = (path: string, options: PluginOptions) => {

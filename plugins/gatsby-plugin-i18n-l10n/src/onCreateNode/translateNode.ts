@@ -66,7 +66,7 @@ const translatePath = (filename: string, relativeDirectory: string, locale: stri
   const kind = relativeDirectory.split('/')[0] || '';
 
   const localeOption = options.locales.find(l => l.locale === locale);
-  let filepath = addLocalePrefix(`/${relativeDirectory}/${slug}`, locale, localeOption?.prefix || '', options.defaultLocale);
+  let filepath = addLocalePrefix(path.join('/', relativeDirectory, slug), locale, localeOption?.prefix || '', options.defaultLocale);
   if (kind && localeOption) {
     filepath = filepath.replace(`/${kind}`, localeOption.slugs[`/${kind}`] || `/${kind}`);
   }
