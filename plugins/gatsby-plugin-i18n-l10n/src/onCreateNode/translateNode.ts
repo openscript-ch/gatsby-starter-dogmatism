@@ -1,7 +1,7 @@
 import { FileSystemNode } from 'gatsby-source-filesystem';
 import { onCreateNode, PluginOptions } from '../../types';
 import convertToSlug from 'limax';
-import { addLocalePrefix } from '../utils/path';
+import { addLocalePrefix, trimRightSlash } from '../utils/path';
 import { findClosestLocale, parseFilename } from '../utils/i18n';
 import fs from 'fs/promises';
 import path from 'path';
@@ -19,7 +19,7 @@ export const translateNode: onCreateNode = async ({ getNode, node, actions }, op
     const translations = await findTranslations(absolutePath, options);
     const alternativeLanguagePaths = translations.map(t => {
       const { filepath } = translatePath(t.filename, relativeDirectory, t.locale, options);
-      return { path: filepath, locale: t.locale };
+      return { path: trimRightSlash(filepath), locale: t.locale };
     });
     const localeOption = options.locales.find(l => l.locale === locale);
 
