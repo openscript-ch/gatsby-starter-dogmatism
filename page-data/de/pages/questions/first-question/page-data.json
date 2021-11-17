@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-generic-page-tsx",
     "path": "/de/pages/questions/first-question",
-    "result": {"data":{"markdownRemark":{"id":"7020e816-9ec6-541e-8e19-d2c6089d56ed","html":"<p>de</p>"}},"pageContext":{"id":"7020e816-9ec6-541e-8e19-d2c6089d56ed"}},
-    "staticQueryHashes": ["2670326781"]}
+    "result": {"data":{"markdownRemark":{"id":"7020e816-9ec6-541e-8e19-d2c6089d56ed","html":"<p>de</p>"}},"pageContext":{"id":"7020e816-9ec6-541e-8e19-d2c6089d56ed","translations":[],"locale":"de-CH","prefix":"de"}},
+    "staticQueryHashes": ["953814312"]}

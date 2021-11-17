@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-generic-page-tsx",
     "path": "/de/pages/another",
-    "result": {"data":{"markdownRemark":{"id":"b4e4a740-9c16-5638-9414-98d6c3ed284d","html":"<p>another</p>"}},"pageContext":{"id":"b4e4a740-9c16-5638-9414-98d6c3ed284d"}},
-    "staticQueryHashes": ["2670326781"]}
+    "result": {"data":{"markdownRemark":{"id":"b4e4a740-9c16-5638-9414-98d6c3ed284d","html":"<p>another</p>"}},"pageContext":{"id":"b4e4a740-9c16-5638-9414-98d6c3ed284d","translations":[],"locale":"de-CH","prefix":"de"}},
+    "staticQueryHashes": ["953814312"]}
