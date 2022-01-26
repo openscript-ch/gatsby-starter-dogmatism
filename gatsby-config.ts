@@ -8,6 +8,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const siteUrl = process.env.SITE_URL || `https://example.com`;
+
 const configuration = withMetaConfig(({ projectRoot }) => {
   return {
     pathPrefix: process.env.PATH_PREFIX || '/',
@@ -15,7 +17,7 @@ const configuration = withMetaConfig(({ projectRoot }) => {
       title: `Gatsby Starter Dogmatism`,
       description: `This is a quite opinionated Gatsby starter.`,
       author: `openscript`,
-      siteUrl: process.env.SITE_URL || `https://example.com`,
+      siteUrl,
       version: packageJson.version,
       project: packageJson.name,
     },
@@ -85,6 +87,7 @@ const configuration = withMetaConfig(({ projectRoot }) => {
         resolve: `gatsby-plugin-i18n-l10n`,
         options: {
           defaultLocale: `en-US`,
+          siteUrl,
           locales: [
             {
               locale: `en-US`,

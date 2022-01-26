@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import { LocalizedLink } from '../../../plugins/gatsby-plugin-i18n-l10n';
+import { LocalizedLink } from 'gatsby-plugin-i18n-l10n';
 
 const navStyle = (theme: Theme) => css`
   ul {
