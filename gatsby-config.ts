@@ -33,10 +33,16 @@ const configuration: GatsbyConfig = {
 
     // Transformers
     `gatsby-transformer-sharp`,
+
+    // Plugins
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-catch-links`,
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        plugins: [
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
           'gatsby-remark-copy-linked-files',
           {
             resolve: 'gatsby-remark-images',
@@ -50,10 +56,6 @@ const configuration: GatsbyConfig = {
         ],
       },
     },
-
-    // Plugins
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-emotion`,
       options: {

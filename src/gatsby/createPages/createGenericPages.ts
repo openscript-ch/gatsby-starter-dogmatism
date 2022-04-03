@@ -6,7 +6,7 @@ export async function CreateGenericPages({ actions, graphql }: CreatePagesArgs) 
   const { createPage } = actions;
   const allPages = await graphql<AllGenericPagesQuery>(`
     query AllGenericPages {
-      allMarkdownRemark(filter: { fields: { kind: { eq: "pages" } } }) {
+      allMdx(filter: { fields: { kind: { eq: "pages" } } }) {
         edges {
           node {
             id
@@ -23,7 +23,7 @@ export async function CreateGenericPages({ actions, graphql }: CreatePagesArgs) 
     }
   `);
 
-  allPages.data?.allMarkdownRemark.edges.forEach(p => {
+  allPages.data?.allMdx.edges.forEach(p => {
     if (p.node.fields && p.node.fields.path) {
       createPage({
         component: resolve('./src/templates/GenericPage.tsx'),
