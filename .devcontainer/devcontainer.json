@@ -23,7 +23,8 @@
     "styled-components.vscode-styled-components",
     "graphql.vscode-graphql",
     "lokalise.i18n-ally",
-    "eliostruyf.vscode-front-matter"
+    "eliostruyf.vscode-front-matter",
+    "silvenon.mdx"
   ],
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   "forwardPorts": [8000]
