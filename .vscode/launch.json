@@ -5,7 +5,7 @@
       "name": "Gatsby develop",
       "type": "pwa-node",
       "request": "launch",
-      "program": "${workspaceRoot}/node_modules/.bin/gatsby-ts",
+      "program": "${workspaceRoot}/node_modules/.bin/gatsby",
       "args": ["develop"],
       "runtimeArgs": ["--nolazy"],
       "console": "integratedTerminal"
@@ -14,7 +14,7 @@
       "name": "Gatsby build",
       "type": "pwa-node",
       "request": "launch",
-      "program": "${workspaceRoot}/node_modules/.bin/gatsby-ts",
+      "program": "${workspaceRoot}/node_modules/.bin/gatsby",
       "args": ["build"],
       "runtimeArgs": ["--nolazy"],
       "console": "integratedTerminal"
