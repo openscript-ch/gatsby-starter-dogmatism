@@ -2,7 +2,7 @@
 
 This is a quite opinionated Gatsby starter based on [Gatsby's default starter](https://github.com/gatsbyjs/gatsby-starter-default). It features:
 
-- **Gatsby Configuration with Typescript** using [gatsby-ts](https://github.com/Js-Brecht/gatsby-plugin-ts-config/tree/gatsby-ts)
+- **Gatsby Configuration with Typescript** using [native Typescript support](https://www.gatsbyjs.com/docs/reference/release-notes/v4.9/#support-for-typescript-in-gatsby-config-and-gatsby-node)
 - **GraphQL type generation** using [graphql-code-generator](https://github.com/dotansimha/graphql-code-generator)
   - There are plugins (e. g. [gatsby-plugin-graphql-codegen](https://www.gatsbyjs.com/plugins/gatsby-plugin-graphql-codegen/)) for Gatsby which integrate this directly into the lifecycle of Gatsby. These plugins are sometimes not updated for a while or every time you want to regenerate the types you have to restart Gatsby.
 - **Styling with Emotion** using [gatsby-plugin-emotion](https://www.gatsbyjs.com/plugins/gatsby-plugin-emotion/) and themes.
