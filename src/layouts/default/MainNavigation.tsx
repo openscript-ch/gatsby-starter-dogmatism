@@ -1,7 +1,7 @@
-import { css, Theme } from '@emotion/react';
+import { css } from '@emotion/react';
 import { LocalizedLink } from 'gatsby-plugin-i18n-l10n';
 
-const navStyle = (theme: Theme) => css`
+const navStyle = () => css`
   ul {
     list-style: none;
     padding: 0;
