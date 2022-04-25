@@ -6,9 +6,10 @@ This is a quite opinionated Gatsby starter based on [Gatsby's default starter](h
 - **GraphQL type generation** using [graphql-code-generator](https://github.com/dotansimha/graphql-code-generator)
   - There are plugins (e. g. [gatsby-plugin-graphql-codegen](https://www.gatsbyjs.com/plugins/gatsby-plugin-graphql-codegen/)) for Gatsby which integrate this directly into the lifecycle of Gatsby. These plugins are sometimes not updated for a while or every time you want to regenerate the types you have to restart Gatsby.
 - **Styling with Emotion** using [gatsby-plugin-emotion](https://www.gatsbyjs.com/plugins/gatsby-plugin-emotion/) and themes.
-- **Preconfigured VSCode Development Container** using [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- **VSCode Development Container** configuration using [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) allowing a quick start into development.
 - **Internationalization** using [gatsby-plugin-i18n-l10n](https://github.com/openscript-ch/gatsby-plugin-i18n-l10n) and [i18n-ally](https://github.com/lokalise/i18n-ally).
-- **Preconfigured Github Actions** for automatic deployment to [Github Pages](https://pages.github.com/).
+- **Github Actions** for automatic deployment to [Github Pages](https://pages.github.com/).
+- **ESLint and Prettier** configuration helping to write nice, homogeneous code.
 
 > When I used Gatsby for the first time, it wasn't difficult to getting started. What puzzled me is how to structure and organize the project with all it's components and other bits neatly. The main reason I've created this starter, to provide an example how to structure a Gatsby website.
 
