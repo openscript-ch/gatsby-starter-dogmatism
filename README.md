@@ -15,10 +15,12 @@ This is a quite opinionated Gatsby starter based on [Gatsby's default starter](h
 
 ## Getting started
 
-1. **Fork and clone** the repository `git clone https://github.com/openscript/gatsby-starter-dogmatism` or **use** Gatsbys CLI `gatsby new my-new-project https://github.com/openscript/gatsby-starter-dogmatism` to get a copy.
-1. Optionally **open** the new project with Visual Studio Code and [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+1. **Use** Gatsbys CLI `gatsby new my-new-fancy-website https://github.com/openscript-ch/gatsby-starter-dogmatism` or click `Use this template` on the [repository page](https://github.com/openscript-ch/gatsby-starter-dogmatism) to get a copy.
+1. **Open** the new project with Visual Studio Code and [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
 1. **Install** the projects dependencies with `yarn install`.
 1. **Run** the project with `yarn develop`.
+1. **Configure** the Github repository to make automated deployment to Github Pages work:
+   1. Got to `Settings` > `Actions` > `General` > `Workflow permissions` and activate `Read and write permissions`.
 
 ## Configuration
 
