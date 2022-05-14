@@ -6226,7 +6226,7 @@ escape-goat@^2.0.0:
   resolved "https://registry.yarnpkg.com/escape-goat/-/escape-goat-2.1.1.tgz#1b2dc77003676c457ec760b2dc68edb648188675"
   integrity sha512-8/uIhbG12Csjy2JEW7D9pHbreaVaS/OpN3ycnyvElTdwM5n6GY6W6e2IPemfvGZeUMqZ9A/3GqIZMgKnBhAw/Q==
 
-escape-html@^1.0.3, escape-html@~1.0.3:
+escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
@@ -8544,13 +8544,6 @@ internal-slot@^1.0.3:
     has "^1.0.3"
     side-channel "^1.0.4"
 
-interweave@13.0.0:
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/interweave/-/interweave-13.0.0.tgz#68fdaa6bde65cf296ba74829bb3746d2a5455a2b"
-  integrity sha512-Mckwj+ix/VtrZu1bRBIIohwrsXj12ZTvJCoYUMZlJmgtvIaQCj0i77eSZ63ckbA1TsPrz2VOvLW9/kTgm5d+mw==
-  dependencies:
-    escape-html "^1.0.3"
-
 intl-messageformat@9.13.0:
   version "9.13.0"
   resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.13.0.tgz#97360b73bd82212e4f6005c712a4a16053165468"
@@ -9296,7 +9289,7 @@ lilconfig@^2.0.3:
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.5.tgz#19e57fd06ccc3848fd1891655b5a447092225b25"
   integrity sha512-xaYmXZtTHPAw5m+xLN8ab9C+3a8YmV3asNSPOATITbtwrfbwaLJj8h66H1WMIpALCkqsIzK3h7oQ+PdX+LQ9Eg==
 
-limax@3.0.0, limax@^3.0.0:
+limax@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/limax/-/limax-3.0.0.tgz#99beab12cc93036870b8a94a408652c657dcc846"
   integrity sha512-7O14piibxAkJlQuAvhbJY5uubV7xszi1kQgnr5z+RkDJXyKYoStilqqpH8//LJq+HQpQN7TJmj3qxXzaEJOSfg==
