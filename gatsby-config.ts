@@ -13,6 +13,7 @@ const siteUrl = process.env.SITE_URL || `https://example.com`;
 
 const configuration: GatsbyConfig = {
   pathPrefix: process.env.PATH_PREFIX || '/',
+  graphqlTypegen: true,
   siteMetadata: {
     title: `Gatsby Starter Dogmatism`,
     description: `This is a quite opinionated Gatsby starter.`,

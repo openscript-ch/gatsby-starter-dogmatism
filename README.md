@@ -3,8 +3,7 @@
 This is a quite opinionated Gatsby starter based on [Gatsby's default starter](https://github.com/gatsbyjs/gatsby-starter-default). It features:
 
 - **Gatsby Configuration with Typescript** using [native Typescript support](https://www.gatsbyjs.com/docs/reference/release-notes/v4.9/#support-for-typescript-in-gatsby-config-and-gatsby-node)
-- **GraphQL type generation** using [graphql-code-generator](https://github.com/dotansimha/graphql-code-generator)
-  - There are plugins (e. g. [gatsby-plugin-graphql-codegen](https://www.gatsbyjs.com/plugins/gatsby-plugin-graphql-codegen/)) for Gatsby which integrate this directly into the lifecycle of Gatsby. These plugins are sometimes not updated for a while or every time you want to regenerate the types you have to restart Gatsby.
+- **GraphQL type generation** using [built in solution.](https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/)
 - **Styling with Emotion** using [gatsby-plugin-emotion](https://www.gatsbyjs.com/plugins/gatsby-plugin-emotion/) and themes.
 - **VSCode Development Container** configuration using [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) allowing a quick start into development.
 - **Internationalization** using [gatsby-plugin-i18n-l10n](https://github.com/openscript-ch/gatsby-plugin-i18n-l10n) and [i18n-ally](https://github.com/lokalise/i18n-ally).

@@ -1,10 +1,9 @@
 import { graphql, PageProps } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { IndexPageQuery } from '../../graphql-types';
 import { DefaultLayout } from '../layouts/DefaultLayout';
 import { SitePageContext } from '../types';
 
-export default function IndexPage({ data }: PageProps<IndexPageQuery, SitePageContext>) {
+export default function IndexPage({ data }: PageProps<Queries.IndexPageQuery, SitePageContext>) {
   return (
     <DefaultLayout>
       <MDXRenderer>{data.slogans?.body || ''}</MDXRenderer>

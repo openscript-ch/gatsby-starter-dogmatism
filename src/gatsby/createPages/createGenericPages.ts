@@ -1,10 +1,9 @@
 import { CreatePagesArgs } from 'gatsby';
 import { resolve } from 'path';
-import { AllGenericPagesQuery } from '../../../graphql-types';
 
 export async function CreateGenericPages({ actions, graphql }: CreatePagesArgs) {
   const { createPage } = actions;
-  const allPages = await graphql<AllGenericPagesQuery>(`
+  const allPages = await graphql<Queries.AllGenericPagesQuery>(`
     query AllGenericPages {
       allMdx(filter: { fields: { kind: { eq: "pages" } } }) {
         edges {
