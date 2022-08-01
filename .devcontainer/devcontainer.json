@@ -13,19 +13,20 @@
   "settings": {},
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
-    "streetsidesoftware.code-spell-checker",
-    "esbenp.prettier-vscode",
-    "mikestead.dotenv",
-    "eamodio.gitlens",
-    "vscode-icons-team.vscode-icons",
-    "mgmcdermott.vscode-language-babel",
-    "dbaeumer.vscode-eslint",
-    "styled-components.vscode-styled-components",
-    "graphql.vscode-graphql",
-    "lokalise.i18n-ally",
-    "eliostruyf.vscode-front-matter",
-    "silvenon.mdx"
-  ],
+	"streetsidesoftware.code-spell-checker",
+	"esbenp.prettier-vscode",
+	"mikestead.dotenv",
+	"eamodio.gitlens",
+	"vscode-icons-team.vscode-icons",
+	"mgmcdermott.vscode-language-babel",
+	"dbaeumer.vscode-eslint",
+	"styled-components.vscode-styled-components",
+	"graphql.vscode-graphql",
+	"lokalise.i18n-ally",
+	"eliostruyf.vscode-front-matter",
+	"silvenon.mdx",
+	"GraphQL.vscode-graphql"
+],
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   "forwardPorts": [8000]
   // Use 'postCreateCommand' to run commands after the container is created.
