@@ -10,9 +10,8 @@ export type Scalars = {
   Boolean: boolean;
   Int: number;
   Float: number;
-  /** A date string, such as 2007-12-03, compliant with the ISO 8601 standard for representation of dates and times using the Gregorian calendar. */
   Date: any;
-  /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
+  GatsbyImageData: any;
   JSON: any;
 };
 
@@ -209,6 +208,7 @@ export enum DirectoryFieldsEnum {
   ChildrenChildrenId = 'children___children___id',
   ChildrenChildrenInternalContent = 'children___children___internal___content',
   ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalContentFilePath = 'children___children___internal___contentFilePath',
   ChildrenChildrenInternalDescription = 'children___children___internal___description',
   ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
   ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
@@ -220,6 +220,7 @@ export enum DirectoryFieldsEnum {
   ChildrenId = 'children___id',
   ChildrenInternalContent = 'children___internal___content',
   ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalContentFilePath = 'children___internal___contentFilePath',
   ChildrenInternalDescription = 'children___internal___description',
   ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
   ChildrenInternalIgnoreType = 'children___internal___ignoreType',
@@ -232,6 +233,7 @@ export enum DirectoryFieldsEnum {
   ChildrenParentId = 'children___parent___id',
   ChildrenParentInternalContent = 'children___parent___internal___content',
   ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalContentFilePath = 'children___parent___internal___contentFilePath',
   ChildrenParentInternalDescription = 'children___parent___internal___description',
   ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
   ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
@@ -251,6 +253,7 @@ export enum DirectoryFieldsEnum {
   Ino = 'ino',
   InternalContent = 'internal___content',
   InternalContentDigest = 'internal___contentDigest',
+  InternalContentFilePath = 'internal___contentFilePath',
   InternalDescription = 'internal___description',
   InternalFieldOwners = 'internal___fieldOwners',
   InternalIgnoreType = 'internal___ignoreType',
@@ -270,6 +273,7 @@ export enum DirectoryFieldsEnum {
   ParentChildrenId = 'parent___children___id',
   ParentChildrenInternalContent = 'parent___children___internal___content',
   ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalContentFilePath = 'parent___children___internal___contentFilePath',
   ParentChildrenInternalDescription = 'parent___children___internal___description',
   ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
   ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
@@ -281,6 +285,7 @@ export enum DirectoryFieldsEnum {
   ParentId = 'parent___id',
   ParentInternalContent = 'parent___internal___content',
   ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalContentFilePath = 'parent___internal___contentFilePath',
   ParentInternalDescription = 'parent___internal___description',
   ParentInternalFieldOwners = 'parent___internal___fieldOwners',
   ParentInternalIgnoreType = 'parent___internal___ignoreType',
@@ -293,6 +298,7 @@ export enum DirectoryFieldsEnum {
   ParentParentId = 'parent___parent___id',
   ParentParentInternalContent = 'parent___parent___internal___content',
   ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalContentFilePath = 'parent___parent___internal___contentFilePath',
   ParentParentInternalDescription = 'parent___parent___internal___description',
   ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
   ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
@@ -577,6 +583,7 @@ export enum FileFieldsEnum {
   ChildImageSharpChildrenId = 'childImageSharp___children___id',
   ChildImageSharpChildrenInternalContent = 'childImageSharp___children___internal___content',
   ChildImageSharpChildrenInternalContentDigest = 'childImageSharp___children___internal___contentDigest',
+  ChildImageSharpChildrenInternalContentFilePath = 'childImageSharp___children___internal___contentFilePath',
   ChildImageSharpChildrenInternalDescription = 'childImageSharp___children___internal___description',
   ChildImageSharpChildrenInternalFieldOwners = 'childImageSharp___children___internal___fieldOwners',
   ChildImageSharpChildrenInternalIgnoreType = 'childImageSharp___children___internal___ignoreType',
@@ -585,32 +592,56 @@ export enum FileFieldsEnum {
   ChildImageSharpChildrenInternalType = 'childImageSharp___children___internal___type',
   ChildImageSharpChildrenParentChildren = 'childImageSharp___children___parent___children',
   ChildImageSharpChildrenParentId = 'childImageSharp___children___parent___id',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFixedAspectRatio = 'childImageSharp___fixed___aspectRatio',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFixedBase64 = 'childImageSharp___fixed___base64',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFixedHeight = 'childImageSharp___fixed___height',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFixedOriginalName = 'childImageSharp___fixed___originalName',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFixedSrc = 'childImageSharp___fixed___src',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFixedSrcSet = 'childImageSharp___fixed___srcSet',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFixedSrcSetWebp = 'childImageSharp___fixed___srcSetWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFixedSrcWebp = 'childImageSharp___fixed___srcWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFixedTracedSvg = 'childImageSharp___fixed___tracedSVG',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFixedWidth = 'childImageSharp___fixed___width',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidAspectRatio = 'childImageSharp___fluid___aspectRatio',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidBase64 = 'childImageSharp___fluid___base64',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidOriginalImg = 'childImageSharp___fluid___originalImg',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidOriginalName = 'childImageSharp___fluid___originalName',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidPresentationHeight = 'childImageSharp___fluid___presentationHeight',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidPresentationWidth = 'childImageSharp___fluid___presentationWidth',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidSizes = 'childImageSharp___fluid___sizes',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidSrc = 'childImageSharp___fluid___src',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidSrcSet = 'childImageSharp___fluid___srcSet',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidSrcSetWebp = 'childImageSharp___fluid___srcSetWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidSrcWebp = 'childImageSharp___fluid___srcWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpFluidTracedSvg = 'childImageSharp___fluid___tracedSVG',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpGatsbyImageData = 'childImageSharp___gatsbyImageData',
   ChildImageSharpId = 'childImageSharp___id',
   ChildImageSharpInternalContent = 'childImageSharp___internal___content',
   ChildImageSharpInternalContentDigest = 'childImageSharp___internal___contentDigest',
+  ChildImageSharpInternalContentFilePath = 'childImageSharp___internal___contentFilePath',
   ChildImageSharpInternalDescription = 'childImageSharp___internal___description',
   ChildImageSharpInternalFieldOwners = 'childImageSharp___internal___fieldOwners',
   ChildImageSharpInternalIgnoreType = 'childImageSharp___internal___ignoreType',
@@ -626,6 +657,7 @@ export enum FileFieldsEnum {
   ChildImageSharpParentId = 'childImageSharp___parent___id',
   ChildImageSharpParentInternalContent = 'childImageSharp___parent___internal___content',
   ChildImageSharpParentInternalContentDigest = 'childImageSharp___parent___internal___contentDigest',
+  ChildImageSharpParentInternalContentFilePath = 'childImageSharp___parent___internal___contentFilePath',
   ChildImageSharpParentInternalDescription = 'childImageSharp___parent___internal___description',
   ChildImageSharpParentInternalFieldOwners = 'childImageSharp___parent___internal___fieldOwners',
   ChildImageSharpParentInternalIgnoreType = 'childImageSharp___parent___internal___ignoreType',
@@ -634,11 +666,17 @@ export enum FileFieldsEnum {
   ChildImageSharpParentInternalType = 'childImageSharp___parent___internal___type',
   ChildImageSharpParentParentChildren = 'childImageSharp___parent___parent___children',
   ChildImageSharpParentParentId = 'childImageSharp___parent___parent___id',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpResizeAspectRatio = 'childImageSharp___resize___aspectRatio',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpResizeHeight = 'childImageSharp___resize___height',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpResizeOriginalName = 'childImageSharp___resize___originalName',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpResizeSrc = 'childImageSharp___resize___src',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpResizeTracedSvg = 'childImageSharp___resize___tracedSVG',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildImageSharpResizeWidth = 'childImageSharp___resize___width',
   ChildMdxBody = 'childMdx___body',
   ChildMdxChildren = 'childMdx___children',
@@ -648,6 +686,7 @@ export enum FileFieldsEnum {
   ChildMdxChildrenId = 'childMdx___children___id',
   ChildMdxChildrenInternalContent = 'childMdx___children___internal___content',
   ChildMdxChildrenInternalContentDigest = 'childMdx___children___internal___contentDigest',
+  ChildMdxChildrenInternalContentFilePath = 'childMdx___children___internal___contentFilePath',
   ChildMdxChildrenInternalDescription = 'childMdx___children___internal___description',
   ChildMdxChildrenInternalFieldOwners = 'childMdx___children___internal___fieldOwners',
   ChildMdxChildrenInternalIgnoreType = 'childMdx___children___internal___ignoreType',
@@ -656,6 +695,7 @@ export enum FileFieldsEnum {
   ChildMdxChildrenInternalType = 'childMdx___children___internal___type',
   ChildMdxChildrenParentChildren = 'childMdx___children___parent___children',
   ChildMdxChildrenParentId = 'childMdx___children___parent___id',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildMdxExcerpt = 'childMdx___excerpt',
   ChildMdxFieldsFilename = 'childMdx___fields___filename',
   ChildMdxFieldsKind = 'childMdx___fields___kind',
@@ -666,28 +706,23 @@ export enum FileFieldsEnum {
   ChildMdxFieldsTranslations = 'childMdx___fields___translations',
   ChildMdxFieldsTranslationsLocale = 'childMdx___fields___translations___locale',
   ChildMdxFieldsTranslationsPath = 'childMdx___fields___translations___path',
-  ChildMdxFileAbsolutePath = 'childMdx___fileAbsolutePath',
-  ChildMdxFrontmatterTitle = 'childMdx___frontmatter___title',
-  ChildMdxHeadings = 'childMdx___headings',
-  ChildMdxHeadingsDepth = 'childMdx___headings___depth',
-  ChildMdxHeadingsValue = 'childMdx___headings___value',
-  ChildMdxHtml = 'childMdx___html',
   ChildMdxId = 'childMdx___id',
   ChildMdxInternalContent = 'childMdx___internal___content',
   ChildMdxInternalContentDigest = 'childMdx___internal___contentDigest',
+  ChildMdxInternalContentFilePath = 'childMdx___internal___contentFilePath',
   ChildMdxInternalDescription = 'childMdx___internal___description',
   ChildMdxInternalFieldOwners = 'childMdx___internal___fieldOwners',
   ChildMdxInternalIgnoreType = 'childMdx___internal___ignoreType',
   ChildMdxInternalMediaType = 'childMdx___internal___mediaType',
   ChildMdxInternalOwner = 'childMdx___internal___owner',
   ChildMdxInternalType = 'childMdx___internal___type',
-  ChildMdxMdxAst = 'childMdx___mdxAST',
   ChildMdxParentChildren = 'childMdx___parent___children',
   ChildMdxParentChildrenChildren = 'childMdx___parent___children___children',
   ChildMdxParentChildrenId = 'childMdx___parent___children___id',
   ChildMdxParentId = 'childMdx___parent___id',
   ChildMdxParentInternalContent = 'childMdx___parent___internal___content',
   ChildMdxParentInternalContentDigest = 'childMdx___parent___internal___contentDigest',
+  ChildMdxParentInternalContentFilePath = 'childMdx___parent___internal___contentFilePath',
   ChildMdxParentInternalDescription = 'childMdx___parent___internal___description',
   ChildMdxParentInternalFieldOwners = 'childMdx___parent___internal___fieldOwners',
   ChildMdxParentInternalIgnoreType = 'childMdx___parent___internal___ignoreType',
@@ -696,13 +731,8 @@ export enum FileFieldsEnum {
   ChildMdxParentInternalType = 'childMdx___parent___internal___type',
   ChildMdxParentParentChildren = 'childMdx___parent___parent___children',
   ChildMdxParentParentId = 'childMdx___parent___parent___id',
-  ChildMdxRawBody = 'childMdx___rawBody',
-  ChildMdxSlug = 'childMdx___slug',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildMdxTableOfContents = 'childMdx___tableOfContents',
-  ChildMdxTimeToRead = 'childMdx___timeToRead',
-  ChildMdxWordCountParagraphs = 'childMdx___wordCount___paragraphs',
-  ChildMdxWordCountSentences = 'childMdx___wordCount___sentences',
-  ChildMdxWordCountWords = 'childMdx___wordCount___words',
   Children = 'children',
   ChildrenImageSharp = 'childrenImageSharp',
   ChildrenImageSharpChildren = 'childrenImageSharp___children',
@@ -712,6 +742,7 @@ export enum FileFieldsEnum {
   ChildrenImageSharpChildrenId = 'childrenImageSharp___children___id',
   ChildrenImageSharpChildrenInternalContent = 'childrenImageSharp___children___internal___content',
   ChildrenImageSharpChildrenInternalContentDigest = 'childrenImageSharp___children___internal___contentDigest',
+  ChildrenImageSharpChildrenInternalContentFilePath = 'childrenImageSharp___children___internal___contentFilePath',
   ChildrenImageSharpChildrenInternalDescription = 'childrenImageSharp___children___internal___description',
   ChildrenImageSharpChildrenInternalFieldOwners = 'childrenImageSharp___children___internal___fieldOwners',
   ChildrenImageSharpChildrenInternalIgnoreType = 'childrenImageSharp___children___internal___ignoreType',
@@ -720,32 +751,56 @@ export enum FileFieldsEnum {
   ChildrenImageSharpChildrenInternalType = 'childrenImageSharp___children___internal___type',
   ChildrenImageSharpChildrenParentChildren = 'childrenImageSharp___children___parent___children',
   ChildrenImageSharpChildrenParentId = 'childrenImageSharp___children___parent___id',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFixedAspectRatio = 'childrenImageSharp___fixed___aspectRatio',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFixedBase64 = 'childrenImageSharp___fixed___base64',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFixedHeight = 'childrenImageSharp___fixed___height',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFixedOriginalName = 'childrenImageSharp___fixed___originalName',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFixedSrc = 'childrenImageSharp___fixed___src',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFixedSrcSet = 'childrenImageSharp___fixed___srcSet',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFixedSrcSetWebp = 'childrenImageSharp___fixed___srcSetWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFixedSrcWebp = 'childrenImageSharp___fixed___srcWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFixedTracedSvg = 'childrenImageSharp___fixed___tracedSVG',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFixedWidth = 'childrenImageSharp___fixed___width',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidAspectRatio = 'childrenImageSharp___fluid___aspectRatio',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidBase64 = 'childrenImageSharp___fluid___base64',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidOriginalImg = 'childrenImageSharp___fluid___originalImg',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidOriginalName = 'childrenImageSharp___fluid___originalName',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidPresentationHeight = 'childrenImageSharp___fluid___presentationHeight',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidPresentationWidth = 'childrenImageSharp___fluid___presentationWidth',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidSizes = 'childrenImageSharp___fluid___sizes',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidSrc = 'childrenImageSharp___fluid___src',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidSrcSet = 'childrenImageSharp___fluid___srcSet',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidSrcSetWebp = 'childrenImageSharp___fluid___srcSetWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidSrcWebp = 'childrenImageSharp___fluid___srcWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpFluidTracedSvg = 'childrenImageSharp___fluid___tracedSVG',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpGatsbyImageData = 'childrenImageSharp___gatsbyImageData',
   ChildrenImageSharpId = 'childrenImageSharp___id',
   ChildrenImageSharpInternalContent = 'childrenImageSharp___internal___content',
   ChildrenImageSharpInternalContentDigest = 'childrenImageSharp___internal___contentDigest',
+  ChildrenImageSharpInternalContentFilePath = 'childrenImageSharp___internal___contentFilePath',
   ChildrenImageSharpInternalDescription = 'childrenImageSharp___internal___description',
   ChildrenImageSharpInternalFieldOwners = 'childrenImageSharp___internal___fieldOwners',
   ChildrenImageSharpInternalIgnoreType = 'childrenImageSharp___internal___ignoreType',
@@ -761,6 +816,7 @@ export enum FileFieldsEnum {
   ChildrenImageSharpParentId = 'childrenImageSharp___parent___id',
   ChildrenImageSharpParentInternalContent = 'childrenImageSharp___parent___internal___content',
   ChildrenImageSharpParentInternalContentDigest = 'childrenImageSharp___parent___internal___contentDigest',
+  ChildrenImageSharpParentInternalContentFilePath = 'childrenImageSharp___parent___internal___contentFilePath',
   ChildrenImageSharpParentInternalDescription = 'childrenImageSharp___parent___internal___description',
   ChildrenImageSharpParentInternalFieldOwners = 'childrenImageSharp___parent___internal___fieldOwners',
   ChildrenImageSharpParentInternalIgnoreType = 'childrenImageSharp___parent___internal___ignoreType',
@@ -769,11 +825,17 @@ export enum FileFieldsEnum {
   ChildrenImageSharpParentInternalType = 'childrenImageSharp___parent___internal___type',
   ChildrenImageSharpParentParentChildren = 'childrenImageSharp___parent___parent___children',
   ChildrenImageSharpParentParentId = 'childrenImageSharp___parent___parent___id',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpResizeAspectRatio = 'childrenImageSharp___resize___aspectRatio',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpResizeHeight = 'childrenImageSharp___resize___height',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpResizeOriginalName = 'childrenImageSharp___resize___originalName',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpResizeSrc = 'childrenImageSharp___resize___src',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpResizeTracedSvg = 'childrenImageSharp___resize___tracedSVG',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenImageSharpResizeWidth = 'childrenImageSharp___resize___width',
   ChildrenMdx = 'childrenMdx',
   ChildrenMdxBody = 'childrenMdx___body',
@@ -784,6 +846,7 @@ export enum FileFieldsEnum {
   ChildrenMdxChildrenId = 'childrenMdx___children___id',
   ChildrenMdxChildrenInternalContent = 'childrenMdx___children___internal___content',
   ChildrenMdxChildrenInternalContentDigest = 'childrenMdx___children___internal___contentDigest',
+  ChildrenMdxChildrenInternalContentFilePath = 'childrenMdx___children___internal___contentFilePath',
   ChildrenMdxChildrenInternalDescription = 'childrenMdx___children___internal___description',
   ChildrenMdxChildrenInternalFieldOwners = 'childrenMdx___children___internal___fieldOwners',
   ChildrenMdxChildrenInternalIgnoreType = 'childrenMdx___children___internal___ignoreType',
@@ -792,6 +855,7 @@ export enum FileFieldsEnum {
   ChildrenMdxChildrenInternalType = 'childrenMdx___children___internal___type',
   ChildrenMdxChildrenParentChildren = 'childrenMdx___children___parent___children',
   ChildrenMdxChildrenParentId = 'childrenMdx___children___parent___id',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenMdxExcerpt = 'childrenMdx___excerpt',
   ChildrenMdxFieldsFilename = 'childrenMdx___fields___filename',
   ChildrenMdxFieldsKind = 'childrenMdx___fields___kind',
@@ -802,28 +866,23 @@ export enum FileFieldsEnum {
   ChildrenMdxFieldsTranslations = 'childrenMdx___fields___translations',
   ChildrenMdxFieldsTranslationsLocale = 'childrenMdx___fields___translations___locale',
   ChildrenMdxFieldsTranslationsPath = 'childrenMdx___fields___translations___path',
-  ChildrenMdxFileAbsolutePath = 'childrenMdx___fileAbsolutePath',
-  ChildrenMdxFrontmatterTitle = 'childrenMdx___frontmatter___title',
-  ChildrenMdxHeadings = 'childrenMdx___headings',
-  ChildrenMdxHeadingsDepth = 'childrenMdx___headings___depth',
-  ChildrenMdxHeadingsValue = 'childrenMdx___headings___value',
-  ChildrenMdxHtml = 'childrenMdx___html',
   ChildrenMdxId = 'childrenMdx___id',
   ChildrenMdxInternalContent = 'childrenMdx___internal___content',
   ChildrenMdxInternalContentDigest = 'childrenMdx___internal___contentDigest',
+  ChildrenMdxInternalContentFilePath = 'childrenMdx___internal___contentFilePath',
   ChildrenMdxInternalDescription = 'childrenMdx___internal___description',
   ChildrenMdxInternalFieldOwners = 'childrenMdx___internal___fieldOwners',
   ChildrenMdxInternalIgnoreType = 'childrenMdx___internal___ignoreType',
   ChildrenMdxInternalMediaType = 'childrenMdx___internal___mediaType',
   ChildrenMdxInternalOwner = 'childrenMdx___internal___owner',
   ChildrenMdxInternalType = 'childrenMdx___internal___type',
-  ChildrenMdxMdxAst = 'childrenMdx___mdxAST',
   ChildrenMdxParentChildren = 'childrenMdx___parent___children',
   ChildrenMdxParentChildrenChildren = 'childrenMdx___parent___children___children',
   ChildrenMdxParentChildrenId = 'childrenMdx___parent___children___id',
   ChildrenMdxParentId = 'childrenMdx___parent___id',
   ChildrenMdxParentInternalContent = 'childrenMdx___parent___internal___content',
   ChildrenMdxParentInternalContentDigest = 'childrenMdx___parent___internal___contentDigest',
+  ChildrenMdxParentInternalContentFilePath = 'childrenMdx___parent___internal___contentFilePath',
   ChildrenMdxParentInternalDescription = 'childrenMdx___parent___internal___description',
   ChildrenMdxParentInternalFieldOwners = 'childrenMdx___parent___internal___fieldOwners',
   ChildrenMdxParentInternalIgnoreType = 'childrenMdx___parent___internal___ignoreType',
@@ -832,13 +891,8 @@ export enum FileFieldsEnum {
   ChildrenMdxParentInternalType = 'childrenMdx___parent___internal___type',
   ChildrenMdxParentParentChildren = 'childrenMdx___parent___parent___children',
   ChildrenMdxParentParentId = 'childrenMdx___parent___parent___id',
-  ChildrenMdxRawBody = 'childrenMdx___rawBody',
-  ChildrenMdxSlug = 'childrenMdx___slug',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ChildrenMdxTableOfContents = 'childrenMdx___tableOfContents',
-  ChildrenMdxTimeToRead = 'childrenMdx___timeToRead',
-  ChildrenMdxWordCountParagraphs = 'childrenMdx___wordCount___paragraphs',
-  ChildrenMdxWordCountSentences = 'childrenMdx___wordCount___sentences',
-  ChildrenMdxWordCountWords = 'childrenMdx___wordCount___words',
   ChildrenChildren = 'children___children',
   ChildrenChildrenChildren = 'children___children___children',
   ChildrenChildrenChildrenChildren = 'children___children___children___children',
@@ -846,6 +900,7 @@ export enum FileFieldsEnum {
   ChildrenChildrenId = 'children___children___id',
   ChildrenChildrenInternalContent = 'children___children___internal___content',
   ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalContentFilePath = 'children___children___internal___contentFilePath',
   ChildrenChildrenInternalDescription = 'children___children___internal___description',
   ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
   ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
@@ -857,6 +912,7 @@ export enum FileFieldsEnum {
   ChildrenId = 'children___id',
   ChildrenInternalContent = 'children___internal___content',
   ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalContentFilePath = 'children___internal___contentFilePath',
   ChildrenInternalDescription = 'children___internal___description',
   ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
   ChildrenInternalIgnoreType = 'children___internal___ignoreType',
@@ -869,6 +925,7 @@ export enum FileFieldsEnum {
   ChildrenParentId = 'children___parent___id',
   ChildrenParentInternalContent = 'children___parent___internal___content',
   ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalContentFilePath = 'children___parent___internal___contentFilePath',
   ChildrenParentInternalDescription = 'children___parent___internal___description',
   ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
   ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
@@ -888,6 +945,7 @@ export enum FileFieldsEnum {
   Ino = 'ino',
   InternalContent = 'internal___content',
   InternalContentDigest = 'internal___contentDigest',
+  InternalContentFilePath = 'internal___contentFilePath',
   InternalDescription = 'internal___description',
   InternalFieldOwners = 'internal___fieldOwners',
   InternalIgnoreType = 'internal___ignoreType',
@@ -907,6 +965,7 @@ export enum FileFieldsEnum {
   ParentChildrenId = 'parent___children___id',
   ParentChildrenInternalContent = 'parent___children___internal___content',
   ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalContentFilePath = 'parent___children___internal___contentFilePath',
   ParentChildrenInternalDescription = 'parent___children___internal___description',
   ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
   ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
@@ -918,6 +977,7 @@ export enum FileFieldsEnum {
   ParentId = 'parent___id',
   ParentInternalContent = 'parent___internal___content',
   ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalContentFilePath = 'parent___internal___contentFilePath',
   ParentInternalDescription = 'parent___internal___description',
   ParentInternalFieldOwners = 'parent___internal___fieldOwners',
   ParentInternalIgnoreType = 'parent___internal___ignoreType',
@@ -930,6 +990,7 @@ export enum FileFieldsEnum {
   ParentParentId = 'parent___parent___id',
   ParentParentInternalContent = 'parent___parent___internal___content',
   ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalContentFilePath = 'parent___parent___internal___contentFilePath',
   ParentParentInternalDescription = 'parent___parent___internal___description',
   ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
   ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
@@ -1052,6 +1113,13 @@ export type FloatQueryOperatorInput = {
   nin?: InputMaybe<Array<InputMaybe<Scalars['Float']>>>;
 };
 
+export type GatsbyImageDataQueryOperatorInput = {
+  eq?: InputMaybe<Scalars['GatsbyImageData']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['GatsbyImageData']>>>;
+  ne?: InputMaybe<Scalars['GatsbyImageData']>;
+  nin?: InputMaybe<Array<InputMaybe<Scalars['GatsbyImageData']>>>;
+};
+
 export enum GatsbyImageFormat {
   Auto = 'AUTO',
   Avif = 'AVIF',
@@ -1072,15 +1140,6 @@ export enum GatsbyImagePlaceholder {
   DominantColor = 'DOMINANT_COLOR',
   None = 'NONE',
   TracedSvg = 'TRACED_SVG'
-}
-
-export enum HeadingsMdx {
-  H1 = 'h1',
-  H2 = 'h2',
-  H3 = 'h3',
-  H4 = 'h4',
-  H5 = 'h5',
-  H6 = 'h6'
 }
 
 export enum ImageCropFocus {
@@ -1132,7 +1191,7 @@ export type ImageSharp = Node & {
   children: Array<Node>;
   fixed?: Maybe<ImageSharpFixed>;
   fluid?: Maybe<ImageSharpFluid>;
-  gatsbyImageData: Scalars['JSON'];
+  gatsbyImageData: Scalars['GatsbyImageData'];
   id: Scalars['ID'];
   internal: Internal;
   original?: Maybe<ImageSharpOriginal>;
@@ -1289,6 +1348,7 @@ export enum ImageSharpFieldsEnum {
   ChildrenChildrenId = 'children___children___id',
   ChildrenChildrenInternalContent = 'children___children___internal___content',
   ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalContentFilePath = 'children___children___internal___contentFilePath',
   ChildrenChildrenInternalDescription = 'children___children___internal___description',
   ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
   ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
@@ -1300,6 +1360,7 @@ export enum ImageSharpFieldsEnum {
   ChildrenId = 'children___id',
   ChildrenInternalContent = 'children___internal___content',
   ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalContentFilePath = 'children___internal___contentFilePath',
   ChildrenInternalDescription = 'children___internal___description',
   ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
   ChildrenInternalIgnoreType = 'children___internal___ignoreType',
@@ -1312,6 +1373,7 @@ export enum ImageSharpFieldsEnum {
   ChildrenParentId = 'children___parent___id',
   ChildrenParentInternalContent = 'children___parent___internal___content',
   ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalContentFilePath = 'children___parent___internal___contentFilePath',
   ChildrenParentInternalDescription = 'children___parent___internal___description',
   ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
   ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
@@ -1320,32 +1382,56 @@ export enum ImageSharpFieldsEnum {
   ChildrenParentInternalType = 'children___parent___internal___type',
   ChildrenParentParentChildren = 'children___parent___parent___children',
   ChildrenParentParentId = 'children___parent___parent___id',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FixedAspectRatio = 'fixed___aspectRatio',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FixedBase64 = 'fixed___base64',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FixedHeight = 'fixed___height',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FixedOriginalName = 'fixed___originalName',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FixedSrc = 'fixed___src',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FixedSrcSet = 'fixed___srcSet',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FixedSrcSetWebp = 'fixed___srcSetWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FixedSrcWebp = 'fixed___srcWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FixedTracedSvg = 'fixed___tracedSVG',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FixedWidth = 'fixed___width',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidAspectRatio = 'fluid___aspectRatio',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidBase64 = 'fluid___base64',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidOriginalImg = 'fluid___originalImg',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidOriginalName = 'fluid___originalName',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidPresentationHeight = 'fluid___presentationHeight',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidPresentationWidth = 'fluid___presentationWidth',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidSizes = 'fluid___sizes',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidSrc = 'fluid___src',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidSrcSet = 'fluid___srcSet',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidSrcSetWebp = 'fluid___srcSetWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidSrcWebp = 'fluid___srcWebp',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   FluidTracedSvg = 'fluid___tracedSVG',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   GatsbyImageData = 'gatsbyImageData',
   Id = 'id',
   InternalContent = 'internal___content',
   InternalContentDigest = 'internal___contentDigest',
+  InternalContentFilePath = 'internal___contentFilePath',
   InternalDescription = 'internal___description',
   InternalFieldOwners = 'internal___fieldOwners',
   InternalIgnoreType = 'internal___ignoreType',
@@ -1362,6 +1448,7 @@ export enum ImageSharpFieldsEnum {
   ParentChildrenId = 'parent___children___id',
   ParentChildrenInternalContent = 'parent___children___internal___content',
   ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalContentFilePath = 'parent___children___internal___contentFilePath',
   ParentChildrenInternalDescription = 'parent___children___internal___description',
   ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
   ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
@@ -1373,6 +1460,7 @@ export enum ImageSharpFieldsEnum {
   ParentId = 'parent___id',
   ParentInternalContent = 'parent___internal___content',
   ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalContentFilePath = 'parent___internal___contentFilePath',
   ParentInternalDescription = 'parent___internal___description',
   ParentInternalFieldOwners = 'parent___internal___fieldOwners',
   ParentInternalIgnoreType = 'parent___internal___ignoreType',
@@ -1385,6 +1473,7 @@ export enum ImageSharpFieldsEnum {
   ParentParentId = 'parent___parent___id',
   ParentParentInternalContent = 'parent___parent___internal___content',
   ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalContentFilePath = 'parent___parent___internal___contentFilePath',
   ParentParentInternalDescription = 'parent___parent___internal___description',
   ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
   ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
@@ -1393,11 +1482,17 @@ export enum ImageSharpFieldsEnum {
   ParentParentInternalType = 'parent___parent___internal___type',
   ParentParentParentChildren = 'parent___parent___parent___children',
   ParentParentParentId = 'parent___parent___parent___id',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ResizeAspectRatio = 'resize___aspectRatio',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ResizeHeight = 'resize___height',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ResizeOriginalName = 'resize___originalName',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ResizeSrc = 'resize___src',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ResizeTracedSvg = 'resize___tracedSVG',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   ResizeWidth = 'resize___width'
 }
 
@@ -1405,7 +1500,7 @@ export type ImageSharpFilterInput = {
   children?: InputMaybe<NodeFilterListInput>;
   fixed?: InputMaybe<ImageSharpFixedFilterInput>;
   fluid?: InputMaybe<ImageSharpFluidFilterInput>;
-  gatsbyImageData?: InputMaybe<JsonQueryOperatorInput>;
+  gatsbyImageData?: InputMaybe<GatsbyImageDataQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   internal?: InputMaybe<InternalFilterInput>;
   original?: InputMaybe<ImageSharpOriginalFilterInput>;
@@ -1569,6 +1664,7 @@ export type Internal = {
   __typename?: 'Internal';
   content?: Maybe<Scalars['String']>;
   contentDigest: Scalars['String'];
+  contentFilePath?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   fieldOwners?: Maybe<Array<Maybe<Scalars['String']>>>;
   ignoreType?: Maybe<Scalars['Boolean']>;
@@ -1580,6 +1676,7 @@ export type Internal = {
 export type InternalFilterInput = {
   content?: InputMaybe<StringQueryOperatorInput>;
   contentDigest?: InputMaybe<StringQueryOperatorInput>;
+  contentFilePath?: InputMaybe<StringQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
   fieldOwners?: InputMaybe<StringQueryOperatorInput>;
   ignoreType?: InputMaybe<BooleanQueryOperatorInput>;
@@ -1604,34 +1701,19 @@ export type JsonQueryOperatorInput = {
 
 export type Mdx = Node & {
   __typename?: 'Mdx';
-  body: Scalars['String'];
+  body?: Maybe<Scalars['String']>;
   children: Array<Node>;
-  excerpt: Scalars['String'];
+  excerpt?: Maybe<Scalars['String']>;
   fields?: Maybe<MdxFields>;
-  fileAbsolutePath: Scalars['String'];
-  frontmatter?: Maybe<MdxFrontmatter>;
-  headings?: Maybe<Array<Maybe<MdxHeadingMdx>>>;
-  html?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   internal: Internal;
-  mdxAST?: Maybe<Scalars['JSON']>;
   parent?: Maybe<Node>;
-  rawBody: Scalars['String'];
-  slug?: Maybe<Scalars['String']>;
   tableOfContents?: Maybe<Scalars['JSON']>;
-  timeToRead?: Maybe<Scalars['Int']>;
-  wordCount?: Maybe<MdxWordCount>;
 };
 
 
 export type MdxExcerptArgs = {
   pruneLength?: InputMaybe<Scalars['Int']>;
-  truncate?: InputMaybe<Scalars['Boolean']>;
-};
-
-
-export type MdxHeadingsArgs = {
-  depth?: InputMaybe<HeadingsMdx>;
 };
 
 
@@ -1707,6 +1789,7 @@ export enum MdxFieldsEnum {
   ChildrenChildrenId = 'children___children___id',
   ChildrenChildrenInternalContent = 'children___children___internal___content',
   ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalContentFilePath = 'children___children___internal___contentFilePath',
   ChildrenChildrenInternalDescription = 'children___children___internal___description',
   ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
   ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
@@ -1718,6 +1801,7 @@ export enum MdxFieldsEnum {
   ChildrenId = 'children___id',
   ChildrenInternalContent = 'children___internal___content',
   ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalContentFilePath = 'children___internal___contentFilePath',
   ChildrenInternalDescription = 'children___internal___description',
   ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
   ChildrenInternalIgnoreType = 'children___internal___ignoreType',
@@ -1730,6 +1814,7 @@ export enum MdxFieldsEnum {
   ChildrenParentId = 'children___parent___id',
   ChildrenParentInternalContent = 'children___parent___internal___content',
   ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalContentFilePath = 'children___parent___internal___contentFilePath',
   ChildrenParentInternalDescription = 'children___parent___internal___description',
   ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
   ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
@@ -1738,6 +1823,7 @@ export enum MdxFieldsEnum {
   ChildrenParentInternalType = 'children___parent___internal___type',
   ChildrenParentParentChildren = 'children___parent___parent___children',
   ChildrenParentParentId = 'children___parent___parent___id',
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
   Excerpt = 'excerpt',
   FieldsFilename = 'fields___filename',
   FieldsKind = 'fields___kind',
@@ -1748,22 +1834,16 @@ export enum MdxFieldsEnum {
   FieldsTranslations = 'fields___translations',
   FieldsTranslationsLocale = 'fields___translations___locale',
   FieldsTranslationsPath = 'fields___translations___path',
-  FileAbsolutePath = 'fileAbsolutePath',
-  FrontmatterTitle = 'frontmatter___title',
-  Headings = 'headings',
-  HeadingsDepth = 'headings___depth',
-  HeadingsValue = 'headings___value',
-  Html = 'html',
   Id = 'id',
   InternalContent = 'internal___content',
   InternalContentDigest = 'internal___contentDigest',
+  InternalContentFilePath = 'internal___contentFilePath',
   InternalDescription = 'internal___description',
   InternalFieldOwners = 'internal___fieldOwners',
   InternalIgnoreType = 'internal___ignoreType',
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
   InternalType = 'internal___type',
-  MdxAst = 'mdxAST',
   ParentChildren = 'parent___children',
   ParentChildrenChildren = 'parent___children___children',
   ParentChildrenChildrenChildren = 'parent___children___children___children',
@@ -1771,6 +1851,7 @@ export enum MdxFieldsEnum {
   ParentChildrenId = 'parent___children___id',
   ParentChildrenInternalContent = 'parent___children___internal___content',
   ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalContentFilePath = 'parent___children___internal___contentFilePath',
   ParentChildrenInternalDescription = 'parent___children___internal___description',
   ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
   ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
@@ -1782,6 +1863,7 @@ export enum MdxFieldsEnum {
   ParentId = 'parent___id',
   ParentInternalContent = 'parent___internal___content',
   ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalContentFilePath = 'parent___internal___contentFilePath',
   ParentInternalDescription = 'parent___internal___description',
   ParentInternalFieldOwners = 'parent___internal___fieldOwners',
   ParentInternalIgnoreType = 'parent___internal___ignoreType',
@@ -1794,6 +1876,7 @@ export enum MdxFieldsEnum {
   ParentParentId = 'parent___parent___id',
   ParentParentInternalContent = 'parent___parent___internal___content',
   ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalContentFilePath = 'parent___parent___internal___contentFilePath',
   ParentParentInternalDescription = 'parent___parent___internal___description',
   ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
   ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
@@ -1802,13 +1885,8 @@ export enum MdxFieldsEnum {
   ParentParentInternalType = 'parent___parent___internal___type',
   ParentParentParentChildren = 'parent___parent___parent___children',
   ParentParentParentId = 'parent___parent___parent___id',
-  RawBody = 'rawBody',
-  Slug = 'slug',
-  TableOfContents = 'tableOfContents',
-  TimeToRead = 'timeToRead',
-  WordCountParagraphs = 'wordCount___paragraphs',
-  WordCountSentences = 'wordCount___sentences',
-  WordCountWords = 'wordCount___words'
+  /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
+  TableOfContents = 'tableOfContents'
 }
 
 export type MdxFieldsFilterInput = {
@@ -1841,32 +1919,14 @@ export type MdxFilterInput = {
   children?: InputMaybe<NodeFilterListInput>;
   excerpt?: InputMaybe<StringQueryOperatorInput>;
   fields?: InputMaybe<MdxFieldsFilterInput>;
-  fileAbsolutePath?: InputMaybe<StringQueryOperatorInput>;
-  frontmatter?: InputMaybe<MdxFrontmatterFilterInput>;
-  headings?: InputMaybe<MdxHeadingMdxFilterListInput>;
-  html?: InputMaybe<StringQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   internal?: InputMaybe<InternalFilterInput>;
-  mdxAST?: InputMaybe<JsonQueryOperatorInput>;
   parent?: InputMaybe<NodeFilterInput>;
-  rawBody?: InputMaybe<StringQueryOperatorInput>;
-  slug?: InputMaybe<StringQueryOperatorInput>;
   tableOfContents?: InputMaybe<JsonQueryOperatorInput>;
-  timeToRead?: InputMaybe<IntQueryOperatorInput>;
-  wordCount?: InputMaybe<MdxWordCountFilterInput>;
 };
 
 export type MdxFilterListInput = {
   elemMatch?: InputMaybe<MdxFilterInput>;
-};
-
-export type MdxFrontmatter = {
-  __typename?: 'MdxFrontmatter';
-  title: Scalars['String'];
-};
-
-export type MdxFrontmatterFilterInput = {
-  title?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type MdxGroupConnection = {
@@ -1911,37 +1971,9 @@ export type MdxGroupConnectionSumArgs = {
   field: MdxFieldsEnum;
 };
 
-export type MdxHeadingMdx = {
-  __typename?: 'MdxHeadingMdx';
-  depth?: Maybe<Scalars['Int']>;
-  value?: Maybe<Scalars['String']>;
-};
-
-export type MdxHeadingMdxFilterInput = {
-  depth?: InputMaybe<IntQueryOperatorInput>;
-  value?: InputMaybe<StringQueryOperatorInput>;
-};
-
-export type MdxHeadingMdxFilterListInput = {
-  elemMatch?: InputMaybe<MdxHeadingMdxFilterInput>;
-};
-
 export type MdxSortInput = {
   fields?: InputMaybe<Array<InputMaybe<MdxFieldsEnum>>>;
   order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
-};
-
-export type MdxWordCount = {
-  __typename?: 'MdxWordCount';
-  paragraphs?: Maybe<Scalars['Int']>;
-  sentences?: Maybe<Scalars['Int']>;
-  words?: Maybe<Scalars['Int']>;
-};
-
-export type MdxWordCountFilterInput = {
-  paragraphs?: InputMaybe<IntQueryOperatorInput>;
-  sentences?: InputMaybe<IntQueryOperatorInput>;
-  words?: InputMaybe<IntQueryOperatorInput>;
 };
 
 /** Node Interface */
@@ -2184,7 +2216,7 @@ export type QueryImageSharpArgs = {
   children?: InputMaybe<NodeFilterListInput>;
   fixed?: InputMaybe<ImageSharpFixedFilterInput>;
   fluid?: InputMaybe<ImageSharpFluidFilterInput>;
-  gatsbyImageData?: InputMaybe<JsonQueryOperatorInput>;
+  gatsbyImageData?: InputMaybe<GatsbyImageDataQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   internal?: InputMaybe<InternalFilterInput>;
   original?: InputMaybe<ImageSharpOriginalFilterInput>;
@@ -2198,25 +2230,17 @@ export type QueryMdxArgs = {
   children?: InputMaybe<NodeFilterListInput>;
   excerpt?: InputMaybe<StringQueryOperatorInput>;
   fields?: InputMaybe<MdxFieldsFilterInput>;
-  fileAbsolutePath?: InputMaybe<StringQueryOperatorInput>;
-  frontmatter?: InputMaybe<MdxFrontmatterFilterInput>;
-  headings?: InputMaybe<MdxHeadingMdxFilterListInput>;
-  html?: InputMaybe<StringQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   internal?: InputMaybe<InternalFilterInput>;
-  mdxAST?: InputMaybe<JsonQueryOperatorInput>;
   parent?: InputMaybe<NodeFilterInput>;
-  rawBody?: InputMaybe<StringQueryOperatorInput>;
-  slug?: InputMaybe<StringQueryOperatorInput>;
   tableOfContents?: InputMaybe<JsonQueryOperatorInput>;
-  timeToRead?: InputMaybe<IntQueryOperatorInput>;
-  wordCount?: InputMaybe<MdxWordCountFilterInput>;
 };
 
 
 export type QuerySiteArgs = {
   buildTime?: InputMaybe<DateQueryOperatorInput>;
   children?: InputMaybe<NodeFilterListInput>;
+  graphqlTypegen?: InputMaybe<BooleanQueryOperatorInput>;
   host?: InputMaybe<StringQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   internal?: InputMaybe<InternalFilterInput>;
@@ -2290,6 +2314,7 @@ export type Site = Node & {
   __typename?: 'Site';
   buildTime?: Maybe<Scalars['Date']>;
   children: Array<Node>;
+  graphqlTypegen?: Maybe<Scalars['Boolean']>;
   host?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   internal: Internal;
@@ -2384,6 +2409,7 @@ export enum SiteBuildMetadataFieldsEnum {
   ChildrenChildrenId = 'children___children___id',
   ChildrenChildrenInternalContent = 'children___children___internal___content',
   ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalContentFilePath = 'children___children___internal___contentFilePath',
   ChildrenChildrenInternalDescription = 'children___children___internal___description',
   ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
   ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
@@ -2395,6 +2421,7 @@ export enum SiteBuildMetadataFieldsEnum {
   ChildrenId = 'children___id',
   ChildrenInternalContent = 'children___internal___content',
   ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalContentFilePath = 'children___internal___contentFilePath',
   ChildrenInternalDescription = 'children___internal___description',
   ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
   ChildrenInternalIgnoreType = 'children___internal___ignoreType',
@@ -2407,6 +2434,7 @@ export enum SiteBuildMetadataFieldsEnum {
   ChildrenParentId = 'children___parent___id',
   ChildrenParentInternalContent = 'children___parent___internal___content',
   ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalContentFilePath = 'children___parent___internal___contentFilePath',
   ChildrenParentInternalDescription = 'children___parent___internal___description',
   ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
   ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
@@ -2418,6 +2446,7 @@ export enum SiteBuildMetadataFieldsEnum {
   Id = 'id',
   InternalContent = 'internal___content',
   InternalContentDigest = 'internal___contentDigest',
+  InternalContentFilePath = 'internal___contentFilePath',
   InternalDescription = 'internal___description',
   InternalFieldOwners = 'internal___fieldOwners',
   InternalIgnoreType = 'internal___ignoreType',
@@ -2431,6 +2460,7 @@ export enum SiteBuildMetadataFieldsEnum {
   ParentChildrenId = 'parent___children___id',
   ParentChildrenInternalContent = 'parent___children___internal___content',
   ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalContentFilePath = 'parent___children___internal___contentFilePath',
   ParentChildrenInternalDescription = 'parent___children___internal___description',
   ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
   ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
@@ -2442,6 +2472,7 @@ export enum SiteBuildMetadataFieldsEnum {
   ParentId = 'parent___id',
   ParentInternalContent = 'parent___internal___content',
   ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalContentFilePath = 'parent___internal___contentFilePath',
   ParentInternalDescription = 'parent___internal___description',
   ParentInternalFieldOwners = 'parent___internal___fieldOwners',
   ParentInternalIgnoreType = 'parent___internal___ignoreType',
@@ -2454,6 +2485,7 @@ export enum SiteBuildMetadataFieldsEnum {
   ParentParentId = 'parent___parent___id',
   ParentParentInternalContent = 'parent___parent___internal___content',
   ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalContentFilePath = 'parent___parent___internal___contentFilePath',
   ParentParentInternalDescription = 'parent___parent___internal___description',
   ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
   ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
@@ -2576,6 +2608,7 @@ export enum SiteFieldsEnum {
   ChildrenChildrenId = 'children___children___id',
   ChildrenChildrenInternalContent = 'children___children___internal___content',
   ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalContentFilePath = 'children___children___internal___contentFilePath',
   ChildrenChildrenInternalDescription = 'children___children___internal___description',
   ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
   ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
@@ -2587,6 +2620,7 @@ export enum SiteFieldsEnum {
   ChildrenId = 'children___id',
   ChildrenInternalContent = 'children___internal___content',
   ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalContentFilePath = 'children___internal___contentFilePath',
   ChildrenInternalDescription = 'children___internal___description',
   ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
   ChildrenInternalIgnoreType = 'children___internal___ignoreType',
@@ -2599,6 +2633,7 @@ export enum SiteFieldsEnum {
   ChildrenParentId = 'children___parent___id',
   ChildrenParentInternalContent = 'children___parent___internal___content',
   ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalContentFilePath = 'children___parent___internal___contentFilePath',
   ChildrenParentInternalDescription = 'children___parent___internal___description',
   ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
   ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
@@ -2607,10 +2642,12 @@ export enum SiteFieldsEnum {
   ChildrenParentInternalType = 'children___parent___internal___type',
   ChildrenParentParentChildren = 'children___parent___parent___children',
   ChildrenParentParentId = 'children___parent___parent___id',
+  GraphqlTypegen = 'graphqlTypegen',
   Host = 'host',
   Id = 'id',
   InternalContent = 'internal___content',
   InternalContentDigest = 'internal___contentDigest',
+  InternalContentFilePath = 'internal___contentFilePath',
   InternalDescription = 'internal___description',
   InternalFieldOwners = 'internal___fieldOwners',
   InternalIgnoreType = 'internal___ignoreType',
@@ -2625,6 +2662,7 @@ export enum SiteFieldsEnum {
   ParentChildrenId = 'parent___children___id',
   ParentChildrenInternalContent = 'parent___children___internal___content',
   ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalContentFilePath = 'parent___children___internal___contentFilePath',
   ParentChildrenInternalDescription = 'parent___children___internal___description',
   ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
   ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
@@ -2636,6 +2674,7 @@ export enum SiteFieldsEnum {
   ParentId = 'parent___id',
   ParentInternalContent = 'parent___internal___content',
   ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalContentFilePath = 'parent___internal___contentFilePath',
   ParentInternalDescription = 'parent___internal___description',
   ParentInternalFieldOwners = 'parent___internal___fieldOwners',
   ParentInternalIgnoreType = 'parent___internal___ignoreType',
@@ -2648,6 +2687,7 @@ export enum SiteFieldsEnum {
   ParentParentId = 'parent___parent___id',
   ParentParentInternalContent = 'parent___parent___internal___content',
   ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalContentFilePath = 'parent___parent___internal___contentFilePath',
   ParentParentInternalDescription = 'parent___parent___internal___description',
   ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
   ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
@@ -2671,6 +2711,7 @@ export enum SiteFieldsEnum {
 export type SiteFilterInput = {
   buildTime?: InputMaybe<DateQueryOperatorInput>;
   children?: InputMaybe<NodeFilterListInput>;
+  graphqlTypegen?: InputMaybe<BooleanQueryOperatorInput>;
   host?: InputMaybe<StringQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   internal?: InputMaybe<InternalFilterInput>;
@@ -2755,6 +2796,7 @@ export enum SiteFunctionFieldsEnum {
   ChildrenChildrenId = 'children___children___id',
   ChildrenChildrenInternalContent = 'children___children___internal___content',
   ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalContentFilePath = 'children___children___internal___contentFilePath',
   ChildrenChildrenInternalDescription = 'children___children___internal___description',
   ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
   ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
@@ -2766,6 +2808,7 @@ export enum SiteFunctionFieldsEnum {
   ChildrenId = 'children___id',
   ChildrenInternalContent = 'children___internal___content',
   ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalContentFilePath = 'children___internal___contentFilePath',
   ChildrenInternalDescription = 'children___internal___description',
   ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
   ChildrenInternalIgnoreType = 'children___internal___ignoreType',
@@ -2778,6 +2821,7 @@ export enum SiteFunctionFieldsEnum {
   ChildrenParentId = 'children___parent___id',
   ChildrenParentInternalContent = 'children___parent___internal___content',
   ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalContentFilePath = 'children___parent___internal___contentFilePath',
   ChildrenParentInternalDescription = 'children___parent___internal___description',
   ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
   ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
@@ -2790,6 +2834,7 @@ export enum SiteFunctionFieldsEnum {
   Id = 'id',
   InternalContent = 'internal___content',
   InternalContentDigest = 'internal___contentDigest',
+  InternalContentFilePath = 'internal___contentFilePath',
   InternalDescription = 'internal___description',
   InternalFieldOwners = 'internal___fieldOwners',
   InternalIgnoreType = 'internal___ignoreType',
@@ -2806,6 +2851,7 @@ export enum SiteFunctionFieldsEnum {
   ParentChildrenId = 'parent___children___id',
   ParentChildrenInternalContent = 'parent___children___internal___content',
   ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalContentFilePath = 'parent___children___internal___contentFilePath',
   ParentChildrenInternalDescription = 'parent___children___internal___description',
   ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
   ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
@@ -2817,6 +2863,7 @@ export enum SiteFunctionFieldsEnum {
   ParentId = 'parent___id',
   ParentInternalContent = 'parent___internal___content',
   ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalContentFilePath = 'parent___internal___contentFilePath',
   ParentInternalDescription = 'parent___internal___description',
   ParentInternalFieldOwners = 'parent___internal___fieldOwners',
   ParentInternalIgnoreType = 'parent___internal___ignoreType',
@@ -2829,6 +2876,7 @@ export enum SiteFunctionFieldsEnum {
   ParentParentId = 'parent___parent___id',
   ParentParentInternalContent = 'parent___parent___internal___content',
   ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalContentFilePath = 'parent___parent___internal___contentFilePath',
   ParentParentInternalDescription = 'parent___parent___internal___description',
   ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
   ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
@@ -3027,6 +3075,7 @@ export enum SitePageFieldsEnum {
   ChildrenChildrenId = 'children___children___id',
   ChildrenChildrenInternalContent = 'children___children___internal___content',
   ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalContentFilePath = 'children___children___internal___contentFilePath',
   ChildrenChildrenInternalDescription = 'children___children___internal___description',
   ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
   ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
@@ -3038,6 +3087,7 @@ export enum SitePageFieldsEnum {
   ChildrenId = 'children___id',
   ChildrenInternalContent = 'children___internal___content',
   ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalContentFilePath = 'children___internal___contentFilePath',
   ChildrenInternalDescription = 'children___internal___description',
   ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
   ChildrenInternalIgnoreType = 'children___internal___ignoreType',
@@ -3050,6 +3100,7 @@ export enum SitePageFieldsEnum {
   ChildrenParentId = 'children___parent___id',
   ChildrenParentInternalContent = 'children___parent___internal___content',
   ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalContentFilePath = 'children___parent___internal___contentFilePath',
   ChildrenParentInternalDescription = 'children___parent___internal___description',
   ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
   ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
@@ -3066,6 +3117,7 @@ export enum SitePageFieldsEnum {
   InternalComponentName = 'internalComponentName',
   InternalContent = 'internal___content',
   InternalContentDigest = 'internal___contentDigest',
+  InternalContentFilePath = 'internal___contentFilePath',
   InternalDescription = 'internal___description',
   InternalFieldOwners = 'internal___fieldOwners',
   InternalIgnoreType = 'internal___ignoreType',
@@ -3081,6 +3133,7 @@ export enum SitePageFieldsEnum {
   ParentChildrenId = 'parent___children___id',
   ParentChildrenInternalContent = 'parent___children___internal___content',
   ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalContentFilePath = 'parent___children___internal___contentFilePath',
   ParentChildrenInternalDescription = 'parent___children___internal___description',
   ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
   ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
@@ -3092,6 +3145,7 @@ export enum SitePageFieldsEnum {
   ParentId = 'parent___id',
   ParentInternalContent = 'parent___internal___content',
   ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalContentFilePath = 'parent___internal___contentFilePath',
   ParentInternalDescription = 'parent___internal___description',
   ParentInternalFieldOwners = 'parent___internal___fieldOwners',
   ParentInternalIgnoreType = 'parent___internal___ignoreType',
@@ -3104,6 +3158,7 @@ export enum SitePageFieldsEnum {
   ParentParentId = 'parent___parent___id',
   ParentParentInternalContent = 'parent___parent___internal___content',
   ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalContentFilePath = 'parent___parent___internal___contentFilePath',
   ParentParentInternalDescription = 'parent___parent___internal___description',
   ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
   ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
@@ -3121,6 +3176,7 @@ export enum SitePageFieldsEnum {
   PluginCreatorChildrenId = 'pluginCreator___children___id',
   PluginCreatorChildrenInternalContent = 'pluginCreator___children___internal___content',
   PluginCreatorChildrenInternalContentDigest = 'pluginCreator___children___internal___contentDigest',
+  PluginCreatorChildrenInternalContentFilePath = 'pluginCreator___children___internal___contentFilePath',
   PluginCreatorChildrenInternalDescription = 'pluginCreator___children___internal___description',
   PluginCreatorChildrenInternalFieldOwners = 'pluginCreator___children___internal___fieldOwners',
   PluginCreatorChildrenInternalIgnoreType = 'pluginCreator___children___internal___ignoreType',
@@ -3132,6 +3188,7 @@ export enum SitePageFieldsEnum {
   PluginCreatorId = 'pluginCreator___id',
   PluginCreatorInternalContent = 'pluginCreator___internal___content',
   PluginCreatorInternalContentDigest = 'pluginCreator___internal___contentDigest',
+  PluginCreatorInternalContentFilePath = 'pluginCreator___internal___contentFilePath',
   PluginCreatorInternalDescription = 'pluginCreator___internal___description',
   PluginCreatorInternalFieldOwners = 'pluginCreator___internal___fieldOwners',
   PluginCreatorInternalIgnoreType = 'pluginCreator___internal___ignoreType',
@@ -3147,6 +3204,7 @@ export enum SitePageFieldsEnum {
   PluginCreatorParentId = 'pluginCreator___parent___id',
   PluginCreatorParentInternalContent = 'pluginCreator___parent___internal___content',
   PluginCreatorParentInternalContentDigest = 'pluginCreator___parent___internal___contentDigest',
+  PluginCreatorParentInternalContentFilePath = 'pluginCreator___parent___internal___contentFilePath',
   PluginCreatorParentInternalDescription = 'pluginCreator___parent___internal___description',
   PluginCreatorParentInternalFieldOwners = 'pluginCreator___parent___internal___fieldOwners',
   PluginCreatorParentInternalIgnoreType = 'pluginCreator___parent___internal___ignoreType',
@@ -3298,6 +3356,7 @@ export enum SitePluginFieldsEnum {
   ChildrenChildrenId = 'children___children___id',
   ChildrenChildrenInternalContent = 'children___children___internal___content',
   ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalContentFilePath = 'children___children___internal___contentFilePath',
   ChildrenChildrenInternalDescription = 'children___children___internal___description',
   ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
   ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
@@ -3309,6 +3368,7 @@ export enum SitePluginFieldsEnum {
   ChildrenId = 'children___id',
   ChildrenInternalContent = 'children___internal___content',
   ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalContentFilePath = 'children___internal___contentFilePath',
   ChildrenInternalDescription = 'children___internal___description',
   ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
   ChildrenInternalIgnoreType = 'children___internal___ignoreType',
@@ -3321,6 +3381,7 @@ export enum SitePluginFieldsEnum {
   ChildrenParentId = 'children___parent___id',
   ChildrenParentInternalContent = 'children___parent___internal___content',
   ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalContentFilePath = 'children___parent___internal___contentFilePath',
   ChildrenParentInternalDescription = 'children___parent___internal___description',
   ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
   ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
@@ -3332,6 +3393,7 @@ export enum SitePluginFieldsEnum {
   Id = 'id',
   InternalContent = 'internal___content',
   InternalContentDigest = 'internal___contentDigest',
+  InternalContentFilePath = 'internal___contentFilePath',
   InternalDescription = 'internal___description',
   InternalFieldOwners = 'internal___fieldOwners',
   InternalIgnoreType = 'internal___ignoreType',
@@ -3348,6 +3410,7 @@ export enum SitePluginFieldsEnum {
   ParentChildrenId = 'parent___children___id',
   ParentChildrenInternalContent = 'parent___children___internal___content',
   ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalContentFilePath = 'parent___children___internal___contentFilePath',
   ParentChildrenInternalDescription = 'parent___children___internal___description',
   ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
   ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
@@ -3359,6 +3422,7 @@ export enum SitePluginFieldsEnum {
   ParentId = 'parent___id',
   ParentInternalContent = 'parent___internal___content',
   ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalContentFilePath = 'parent___internal___contentFilePath',
   ParentInternalDescription = 'parent___internal___description',
   ParentInternalFieldOwners = 'parent___internal___fieldOwners',
   ParentInternalIgnoreType = 'parent___internal___ignoreType',
@@ -3371,6 +3435,7 @@ export enum SitePluginFieldsEnum {
   ParentParentId = 'parent___parent___id',
   ParentParentInternalContent = 'parent___parent___internal___content',
   ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalContentFilePath = 'parent___parent___internal___contentFilePath',
   ParentParentInternalDescription = 'parent___parent___internal___description',
   ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
   ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
@@ -3529,7 +3594,7 @@ export type GatsbyImageSharpFluid_WithWebp_NoBase64Fragment = { __typename?: 'Im
 export type AllGenericPagesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type AllGenericPagesQuery = { __typename?: 'Query', allMdx: { __typename?: 'MdxConnection', edges: Array<{ __typename?: 'MdxEdge', node: { __typename?: 'Mdx', id: string, fields?: { __typename?: 'MdxFields', path?: string | null, translations?: Array<{ __typename?: 'MdxFieldsTranslations', locale?: string | null, path?: string | null } | null> | null } | null } }> } };
+export type AllGenericPagesQuery = { __typename?: 'Query', allMdx: { __typename?: 'MdxConnection', edges: Array<{ __typename?: 'MdxEdge', node: { __typename?: 'Mdx', id: string, fields?: { __typename?: 'MdxFields', path?: string | null, translations?: Array<{ __typename?: 'MdxFieldsTranslations', locale?: string | null, path?: string | null } | null> | null } | null, internal: { __typename?: 'Internal', contentFilePath?: string | null } } }> } };
 
 export type DefaultLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -3541,11 +3606,11 @@ export type IndexPageQueryVariables = Exact<{
 }>;
 
 
-export type IndexPageQuery = { __typename?: 'Query', slogans?: { __typename?: 'Mdx', body: string } | null };
+export type IndexPageQuery = { __typename?: 'Query', slogans?: { __typename?: 'Mdx', id: string } | null };
 
-export type GenericPageQueryVariables = Exact<{
+export type Unnamed_1_QueryVariables = Exact<{
   id: Scalars['String'];
 }>;
 
 
-export type GenericPageQuery = { __typename?: 'Query', mdx?: { __typename?: 'Mdx', id: string, body: string } | null };
+export type Unnamed_1_Query = { __typename?: 'Query', mdx?: { __typename?: 'Mdx', id: string } | null };
