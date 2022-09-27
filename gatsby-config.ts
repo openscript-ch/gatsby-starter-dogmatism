@@ -35,7 +35,6 @@ const configuration: GatsbyConfig = {
     `gatsby-transformer-sharp`,
 
     // Plugins
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-catch-links`,
     {
