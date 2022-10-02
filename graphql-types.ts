@@ -3601,12 +3601,10 @@ export type DefaultLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type DefaultLayoutQuery = { __typename?: 'Query', site?: { __typename?: 'Site', siteMetadata?: { __typename?: 'SiteSiteMetadata', author?: string | null, description?: string | null, siteUrl?: string | null, title?: string | null, version?: string | null, project?: string | null } | null } | null };
 
-export type IndexPageQueryVariables = Exact<{
-  locale?: InputMaybe<Scalars['String']>;
-}>;
+export type DocumentSiteMetadataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type IndexPageQuery = { __typename?: 'Query', slogans?: { __typename?: 'Mdx', id: string } | null };
+export type DocumentSiteMetadataQuery = { __typename?: 'Query', site?: { __typename?: 'Site', siteMetadata?: { __typename?: 'SiteSiteMetadata', title?: string | null, description?: string | null } | null } | null };
 
 export type Unnamed_1_QueryVariables = Exact<{
   id: Scalars['String'];
