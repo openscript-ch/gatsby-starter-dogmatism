@@ -1,16 +1,12 @@
-import { graphql, PageProps } from 'gatsby';
-import { IndexPageQuery } from '../../graphql-types';
-import { DefaultLayout } from '../layouts/DefaultLayout';
-import { SitePageContext } from '../types';
+import { PageProps } from 'gatsby';
 
-export default function IndexPage({ children }: PageProps<IndexPageQuery, SitePageContext>) {
+import { Document } from '../layouts/default/Document';
+import { DefaultLayout } from '../layouts/DefaultLayout';
+
+export default function IndexPage({ children }: PageProps) {
   return <DefaultLayout>{children}</DefaultLayout>;
 }
 
-export const query = graphql`
-  query IndexPage($locale: String) {
-    slogans: mdx(fields: { locale: { eq: $locale }, kind: { eq: "sections" }, filename: { glob: "*slogan*" } }) {
-      id
-    }
-  }
-`;
+export function Head() {
+  return <Document title="Home" />;
+}

@@ -1,1 +1,1 @@
-Eine [andere Seite](./pages/another).
+Eine [andere Seite](./another).
