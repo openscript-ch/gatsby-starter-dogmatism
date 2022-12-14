@@ -1,10 +1,9 @@
 import { graphql, PageProps } from 'gatsby';
-import { IndexPageQuery } from '../../graphql-types';
 
 import { Document } from '../layouts/default/Document';
 import { DefaultLayout } from '../layouts/DefaultLayout';
 
-export default function IndexPage({ data }: PageProps<IndexPageQuery>) {
+export default function IndexPage({ data }: PageProps<Queries.IndexPageQuery>) {
   return <DefaultLayout>{data.mdx?.body}</DefaultLayout>;
 }
 

@@ -1,7 +1,6 @@
 import { css, Global, Theme, ThemeProvider } from '@emotion/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { PropsWithChildren } from 'react';
-import { DefaultLayoutQuery } from '../../graphql-types';
 import { defaultTheme } from '../themes/defaultTheme';
 import { Footer } from './default/Footer';
 import { Header } from './default/Header';
@@ -56,7 +55,7 @@ type DefaultLayoutProps = PropsWithChildren<{
 }>;
 
 export function DefaultLayout({ children, theme }: DefaultLayoutProps) {
-  const data = useStaticQuery<DefaultLayoutQuery>(query);
+  const data = useStaticQuery<Queries.DefaultLayoutQuery>(query);
 
   return (
     <ThemeProvider theme={theme || defaultTheme}>
