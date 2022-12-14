@@ -3,7 +3,7 @@
   "homepage": "https://github.com/openscript/gatsby-starter-dogmatism",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "5.0.0",
+  "version": "5.3.2",
   "author": "openscript",
   "dependencies": {
     "@emotion/react": "11.10.5",
