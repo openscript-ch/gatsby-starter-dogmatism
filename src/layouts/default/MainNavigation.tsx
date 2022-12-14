@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 import { LocalizedLink } from 'gatsby-plugin-i18n-l10n';
+import { FormattedMessage } from 'react-intl';
 
 const navStyle = () => css`
   ul {
@@ -15,7 +16,9 @@ export default function MainNavigation() {
     <nav css={navStyle}>
       <ul>
         <li>
-          <LocalizedLink to="/pages">Joho</LocalizedLink>
+          <LocalizedLink to="/pages">
+            <FormattedMessage id="pages" />
+          </LocalizedLink>
         </li>
       </ul>
     </nav>

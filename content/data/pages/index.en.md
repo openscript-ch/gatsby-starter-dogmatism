@@ -1,1 +1,1 @@
-EN
+This is an English page.

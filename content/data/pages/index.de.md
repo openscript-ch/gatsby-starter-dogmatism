@@ -1,1 +1,1 @@
-Eine [andere Seite](./another).
+Zu einer [anderen Seite](./another).
