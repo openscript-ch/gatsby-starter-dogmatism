@@ -8,8 +8,8 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  build-and-deploy:
-    name: Build and deploy to Github Pages
+  build:
+    name: Build project
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
