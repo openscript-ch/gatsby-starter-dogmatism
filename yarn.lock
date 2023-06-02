@@ -1875,97 +1875,6 @@
   resolved "https://registry.yarnpkg.com/@msgpackr-extract/msgpackr-extract-win32-x64/-/msgpackr-extract-win32-x64-3.0.2.tgz#0f164b726869f71da3c594171df5ebc1c4b0a407"
   integrity sha512-O+6Gs8UeDbyFpbSh2CPEz/UOrrdWPTBYNblZK5CxxLisYt4kGX3Sc+czffFonyjiGSq3jWLwJS/CCJc7tBr4sQ==
 
-"@napi-rs/pinyin-android-arm-eabi@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-android-arm-eabi/-/pinyin-android-arm-eabi-1.7.3.tgz#57c7fce897efb65d9c50a9d0fca43427e55578d1"
-  integrity sha512-f226fq2VP/Tj6ir/PHIWye9AtLYiiN9JQsMS0VYuLENDGAK7eEMz8Mep14Bz/4k5njXyN5yxthrurgk2zg+lNA==
-
-"@napi-rs/pinyin-android-arm64@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-android-arm64/-/pinyin-android-arm64-1.7.3.tgz#8f3d6f6c18afdb79a9de07b59313cd0d615199c4"
-  integrity sha512-SUtj+utc+IYOWjGiRnZlMFp55zfKEyGbmTRxDD47ZWta+CJ6LtMgiXqyNle9ceI7vi9RmW89MqezOC0LnbhV9g==
-
-"@napi-rs/pinyin-darwin-arm64@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-darwin-arm64/-/pinyin-darwin-arm64-1.7.3.tgz#b862a93b78d508031c12373b4cbb967098fdb397"
-  integrity sha512-/DScnPht9S0vVBuIQolh1sNEZuBQARIslyEILKs9CG3nNXjKpEYeExg1YsNu2VDdHjspUVKbw/Qdq5cP830ndA==
-
-"@napi-rs/pinyin-darwin-x64@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-darwin-x64/-/pinyin-darwin-x64-1.7.3.tgz#ea9274a43df011ac290e17c53916d5a5feb7d1fb"
-  integrity sha512-jkIdx9hTCsXL0h3E6N/qVEy80SfaxHpLhw0ETva0AAdG6kmXNPe/blV5/rYickgjhv7ExaHr7GjO9W5RYpB2Qw==
-
-"@napi-rs/pinyin-freebsd-x64@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-freebsd-x64/-/pinyin-freebsd-x64-1.7.3.tgz#3c20d54d631fbd2285b34e32268a5fb23d1635e5"
-  integrity sha512-holrKDL7uz2FUSSHmA8brKgiuKetK/Z028ExB+QVEwNWUMIbHz4V1C5JAD9cy7NKoskk5TLBl8ex2YXu/Z4CVA==
-
-"@napi-rs/pinyin-linux-arm-gnueabihf@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-linux-arm-gnueabihf/-/pinyin-linux-arm-gnueabihf-1.7.3.tgz#e5fc125591d5b236f637ec569d3127e06f23abec"
-  integrity sha512-dUSnDwTEVJDCCsoggrmbfIhz3iC7j3Ga5sTUCXAgUMSqS6f+bKXSCBHO3Nl1IgJa5lUVO/LsOK+izfmNGeKQbQ==
-
-"@napi-rs/pinyin-linux-arm64-gnu@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-linux-arm64-gnu/-/pinyin-linux-arm64-gnu-1.7.3.tgz#5d65458f60d1b585c1960cb9dec9ac17fbc1dab1"
-  integrity sha512-D+cVO03GKIcUubLt+u6VzpqozuMeZkRvYPMmn0JEugq0tVzwthC3Jva9Cwj/w6D/KMSoZsUY+PBDUKRh0X7qiw==
-
-"@napi-rs/pinyin-linux-arm64-musl@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-linux-arm64-musl/-/pinyin-linux-arm64-musl-1.7.3.tgz#1fe5133058e9c567532265ca5975d3400222ad48"
-  integrity sha512-SY2nOt7xD9jnIN1yuXpNvk1XMjqTzh2au5y3K13Vac7ffRh8yAH1QN3vvBPLxvnJdL/U4eQi4gn25wK5sm/DLQ==
-
-"@napi-rs/pinyin-linux-x64-gnu@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-linux-x64-gnu/-/pinyin-linux-x64-gnu-1.7.3.tgz#d37df5e657941f573d8a1f550631da3ef5515f06"
-  integrity sha512-/1kLQAG3yH50Tfs5yr+acktwqePTJpkI0eXK9LQugqaiRMBPd76Uz9edAitYoFhngeBOYrjiOi/7rWexRg4Pmw==
-
-"@napi-rs/pinyin-linux-x64-musl@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-linux-x64-musl/-/pinyin-linux-x64-musl-1.7.3.tgz#c56b3e606f1b05c6eea3910f4d9499a4fdbbbe64"
-  integrity sha512-egzCq/Jf6lzh3yYgUgo24f66UdYHoVv3TRcIkzN7j6BZ3pvNkBOc5HXDXlqoxeZ8aNX5J3rBE041bGyzX6qFHg==
-
-"@napi-rs/pinyin-win32-arm64-msvc@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-win32-arm64-msvc/-/pinyin-win32-arm64-msvc-1.7.3.tgz#633b79061b1f125abf5a746b515c9d19ed2b0aba"
-  integrity sha512-smztMp+PiDdQYP9QVMsbVTthZ0KHIah7VkMtCzwJoTKCY6uvTBoBepAnJfQVYqDojhIwWSjaYBRvxdUh5o79Uw==
-
-"@napi-rs/pinyin-win32-ia32-msvc@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-win32-ia32-msvc/-/pinyin-win32-ia32-msvc-1.7.3.tgz#64b4981226929b4e568273c789f4be185e46eb3f"
-  integrity sha512-TsuzwJPbgQI9pKRoUzHJsPwIkwk1ZRT8AaaZ9gJlBbnW8srX2YZfYk5EACtfqROGhG+hRZIMBmdw+03FhjUsEA==
-
-"@napi-rs/pinyin-win32-x64-msvc@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin-win32-x64-msvc/-/pinyin-win32-x64-msvc-1.7.3.tgz#1f7b5bb577813ae8998a44315ad2de5cf23df72b"
-  integrity sha512-8+7/7gX1Lv97Ces1siboLepLsrG74lpgJvdxmjvTbeWeMpa9T6i4VOe13yO2qzdHhPeWiMlWNpu9n/Jfv2FHFw==
-
-"@napi-rs/pinyin@^1.5.0":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@napi-rs/pinyin/-/pinyin-1.7.3.tgz#d366ac9909ec1bcec1c89ba4f0f772bc22f69f4f"
-  integrity sha512-mKELuij+eNyLi2tIZP7aC718TBDUEBBag6sKoQ7BdJd9ICZt9vS4I6sFglBCCAI1K6ytP0pQEi6X6Y5TkVOmrw==
-  dependencies:
-    "@napi-rs/triples" "^1.1.0"
-  optionalDependencies:
-    "@napi-rs/pinyin-android-arm-eabi" "1.7.3"
-    "@napi-rs/pinyin-android-arm64" "1.7.3"
-    "@napi-rs/pinyin-darwin-arm64" "1.7.3"
-    "@napi-rs/pinyin-darwin-x64" "1.7.3"
-    "@napi-rs/pinyin-freebsd-x64" "1.7.3"
-    "@napi-rs/pinyin-linux-arm-gnueabihf" "1.7.3"
-    "@napi-rs/pinyin-linux-arm64-gnu" "1.7.3"
-    "@napi-rs/pinyin-linux-arm64-musl" "1.7.3"
-    "@napi-rs/pinyin-linux-x64-gnu" "1.7.3"
-    "@napi-rs/pinyin-linux-x64-musl" "1.7.3"
-    "@napi-rs/pinyin-win32-arm64-msvc" "1.7.3"
-    "@napi-rs/pinyin-win32-ia32-msvc" "1.7.3"
-    "@napi-rs/pinyin-win32-x64-msvc" "1.7.3"
-
-"@napi-rs/triples@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@napi-rs/triples/-/triples-1.1.0.tgz#88c35b72e79a20b79bb4c9b3e2817241a1c9f4f9"
-  integrity sha512-XQr74QaLeMiqhStEhLn1im9EOMnkypp7MZOwQhGzqp2Weu5eQJbpPxWxixxlYRKWPOmJjsk6qYfYH9kq43yc2w==
-
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   version "5.1.1-v1"
   resolved "https://registry.yarnpkg.com/@nicolo-ribaudo/eslint-scope-5-internals/-/eslint-scope-5-internals-5.1.1-v1.tgz#dbf733a965ca47b1973177dc0bb6c889edcfb129"
@@ -2682,10 +2591,19 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@16 || 17 || 18", "@types/react@18.2.7", "@types/react@>=16":
+"@types/react@*", "@types/react@16 || 17 || 18", "@types/react@>=16":
   version "18.2.7"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.7.tgz#dfb4518042a3117a045b8c222316f83414a783b3"
   integrity sha512-ojrXpSH2XFCmHm7Jy3q44nXDyN54+EYKP2lBhJ2bqfyPj6cIUW/FZW/Csdia34NQgq7KYcAlHi5184m4X88+yw==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@18.2.8":
+  version "18.2.8"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.8.tgz#a77dcffe4e9af148ca4aa8000c51a1e8ed99e2c8"
+  integrity sha512-lTyWUNrd8ntVkqycEEplasWy2OxNlShj3zqS0LuB1ENUGis5HodmhM7DtCoUGbxj3VW/WsGA0DUhpG6XrM7gPA==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -5972,12 +5890,12 @@ gatsby-plugin-emotion@8.10.0:
     "@babel/runtime" "^7.20.13"
     "@emotion/babel-preset-css-prop" "^11.10.0"
 
-gatsby-plugin-i18n-l10n@5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-i18n-l10n/-/gatsby-plugin-i18n-l10n-5.3.0.tgz#66c9e9adc9ad9c2901ca38197a6655ad61b13dc2"
-  integrity sha512-QlmVgy4tL4VAbfzPIZ8V7QlhtZaFVWzB718vFre9CW9xjClSvR550ZZfIze3ajq0+Hi5MeprMYLhLMWs9ldKbg==
+gatsby-plugin-i18n-l10n@5.4.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-i18n-l10n/-/gatsby-plugin-i18n-l10n-5.4.0.tgz#9b639a1147f13d19f64c6a4ee8937e97d21ae2ff"
+  integrity sha512-M/01KytQYN7N+AfOGSN9w8yICyDs12ysq+MPgroUQ8c4JJUnVnLCX+2GPR8cwE0WM+eto0SlZ/fEAAZ4Hovfcg==
   dependencies:
-    limax "^3.0.0"
+    limax "^4.1.0"
     path-browserify "^1.0.1"
 
 gatsby-plugin-image@3.10.0:
@@ -7638,13 +7556,14 @@ lilconfig@^2.0.3:
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.1.0.tgz#78e23ac89ebb7e1bfbf25b18043de756548e7f52"
   integrity sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==
 
-limax@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/limax/-/limax-3.0.0.tgz#99beab12cc93036870b8a94a408652c657dcc846"
-  integrity sha512-7O14piibxAkJlQuAvhbJY5uubV7xszi1kQgnr5z+RkDJXyKYoStilqqpH8//LJq+HQpQN7TJmj3qxXzaEJOSfg==
+limax@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/limax/-/limax-4.1.0.tgz#b2811ddb1832cf558ba8773001d7c74e3e294506"
+  integrity sha512-vciK5Mx+y+GrJjcVjbEjItzZ6Pbt+LXCb9d3qo3B+HcnTLZYRFyuszD6Hbwk0PDVEmZzS+FA0nT5aBy1HlZgGg==
   dependencies:
-    "@napi-rs/pinyin" "^1.5.0"
     hepburn "^1.2.0"
+    lodash.deburr "^4.1.0"
+    pinyin-pro "^3.14.0"
     speakingurl "^14.0.1"
 
 lines-and-columns@^1.1.6:
@@ -9191,6 +9110,11 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
+
+pinyin-pro@^3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/pinyin-pro/-/pinyin-pro-3.14.0.tgz#3f444e1117caf7236bc90a1573c9653b048f2736"
+  integrity sha512-mbFw2Gx8IlbnxClhaACRFUWXa/lCzCttrPIdHXPzAvWOAmTKcdTFlMjbt5Quq6YY2asgD79Ml/MQpPEGN3o8iw==
 
 pkg-dir@^4.1.0:
   version "4.2.0"
@@ -11071,10 +10995,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-typescript@5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
-  integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
+typescript@5.1.3:
+  version "5.1.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.1.3.tgz#8d84219244a6b40b6fb2b33cc1c062f715b9e826"
+  integrity sha512-XH627E9vkeqhlZFQuL+UsyAXEnibT0kWR2FWONlr4sTjvxyJYnyefgrkyECLzM5NenmKzRAy2rR/OlYLA1HkZw==
 
 ua-parser-js@^0.7.30:
   version "0.7.35"
