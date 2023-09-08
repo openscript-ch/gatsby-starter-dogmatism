@@ -29,7 +29,7 @@
     "react-intl": "6.4.5"
   },
   "devDependencies": {
-    "@babel/core": "7.22.15",
+    "@babel/core": "7.22.17",
     "@babel/eslint-parser": "7.22.15",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
