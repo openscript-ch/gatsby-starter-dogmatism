@@ -1,6 +1,6 @@
 {
 	"name": "Gatsby Starter Dogmatism",
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-20-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm",
 	"customizations": {
 		"vscode": {
 			"extensions": [
