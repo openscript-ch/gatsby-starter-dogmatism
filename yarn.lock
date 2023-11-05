@@ -2760,10 +2760,10 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@18.2.34":
-  version "18.2.34"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.34.tgz#aed20f19473721ba328feb99d1ec3307ebc1a8dd"
-  integrity sha512-U6eW/alrRk37FU/MS2RYMjx0Va2JGIVXELTODaTIYgvWGCV4Y4TfTUzG8DdmpDNIT0Xpj/R7GfyHOJJrDttcvg==
+"@types/react@18.2.35":
+  version "18.2.35"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.35.tgz#bacdc6d139a4d6d47e5186e1a96952c65e1f3792"
+  integrity sha512-LG3xpFZ++rTndV+/XFyX5vUP7NI9yxyk+MQvBDq+CVs8I9DLSc3Ymwb1Vmw5YDoeNeHN4PDZa3HylMKJYT9PNQ==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -6355,10 +6355,10 @@ gatsby-plugin-emotion@8.12.0:
     "@babel/runtime" "^7.20.13"
     "@emotion/babel-preset-css-prop" "^11.11.0"
 
-gatsby-plugin-i18n-l10n@5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-i18n-l10n/-/gatsby-plugin-i18n-l10n-5.4.0.tgz#9b639a1147f13d19f64c6a4ee8937e97d21ae2ff"
-  integrity sha512-M/01KytQYN7N+AfOGSN9w8yICyDs12ysq+MPgroUQ8c4JJUnVnLCX+2GPR8cwE0WM+eto0SlZ/fEAAZ4Hovfcg==
+gatsby-plugin-i18n-l10n@5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-i18n-l10n/-/gatsby-plugin-i18n-l10n-5.5.0.tgz#6ea7cbd35ca52f92bf2604273023b9b0ec2816f8"
+  integrity sha512-PrVHiQLKCeJdmk2JcI8OYN9YqtlFPM5J6qSzHTfzwY1psBwuqSPJL6U1f3m5ng9tXYSMb9I4CmYGiLBxG55jvA==
   dependencies:
     limax "^4.1.0"
     path-browserify "^1.0.1"
