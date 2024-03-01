@@ -6,7 +6,7 @@
   "version": "5.10.0",
   "author": "openscript",
   "dependencies": {
-    "@emotion/react": "11.11.3",
+    "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.0",
     "@mdx-js/mdx": "3.0.1",
     "@mdx-js/react": "3.0.1",
@@ -29,10 +29,10 @@
     "react-intl": "6.6.2"
   },
   "devDependencies": {
-    "@babel/core": "7.23.9",
+    "@babel/core": "7.24.0",
     "@babel/eslint-parser": "7.23.10",
-    "@types/node": "20.11.20",
-    "@types/react": "18.2.58",
+    "@types/node": "20.11.24",
+    "@types/react": "18.2.61",
     "@types/react-dom": "18.2.19",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
