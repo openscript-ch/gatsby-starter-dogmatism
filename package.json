@@ -8,8 +8,8 @@
   "dependencies": {
     "@emotion/react": "11.13.3",
     "@emotion/styled": "11.13.0",
-    "@mdx-js/mdx": "3.0.1",
-    "@mdx-js/react": "3.0.1",
+    "@mdx-js/mdx": "3.1.0",
+    "@mdx-js/react": "3.1.0",
     "gatsby": "5.13.7",
     "gatsby-plugin-catch-links": "5.13.1",
     "gatsby-plugin-emotion": "8.13.1",
